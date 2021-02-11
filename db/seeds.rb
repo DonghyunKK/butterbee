@@ -8,13 +8,14 @@
 
 puts "Cleaning database..."
 Cake.destroy_all
+Cupcake.destroy_all
 
-puts "Creat user"
-admin = User.create!(
-  email: "admin@gmail.com",
-  password: '123456',
-  admin: true
-)
+# puts "Creat user"
+# admin = User.create!(
+#   email: "admin@gmail.com",
+#   password: '123456',
+#   admin: true
+# )
 
 
 puts "Creating cakes..."
@@ -24,5 +25,14 @@ peanut_cake =  { name: "Peanut", item_code: "P368", user_id: 1 }
 [ vanilla_cake, peanut_cake ].each do |attributes|
   cake = Cake.create!(attributes)
   puts "Created #{cake.name}"
+end
+
+puts "Creating cupcakes..."
+carrot_cupcake = { name: "Carrot", item_code: "C656", user_id: 1 }
+sesame_cupcake =  { name: "Sesame", item_code: "S528", user_id: 1 }
+
+[ carrot_cupcake, sesame_cupcake ].each do |attributes|
+  cupcake = Cupcake.create!(attributes)
+  puts "Created #{cupcake.name}"
 end
 puts "Finished!"

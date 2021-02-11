@@ -27,6 +27,7 @@ class CupcakesController < ApplicationController
   def update
     @cupcake = Cupcake.find(params[:id])
     @cupcake.update(cupcake_params)
+    redirect_to cupcake_path(@cupcake)
   end
 
   def destroy
