@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Cleaning database..."
+Cake.destroy_all
+
+puts "Creat user"
+admin = User.create!(
+  email: "admin@gmail.com",
+  password: '123456',
+  admin: true
+)
+
+
+puts "Creating cakes..."
+vanilla_cake = { name: "Vanilla", item_code: "M426", user_id: 1 }
+peanut_cake =  { name: "Peanut", item_code: "P368", user_id: 1 }
+
+[ vanilla_cake, peanut_cake ].each do |attributes|
+  cake = Cake.create!(attributes)
+  puts "Created #{cake.name}"
+end
+puts "Finished!"
