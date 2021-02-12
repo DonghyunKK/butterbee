@@ -25,8 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # add devise gem
 gem 'devise'
 
-# add dotenv
-gem 'dotenv-rails', groups: [:development, :test]
+# add cloudinary
+gem 'cloudinary', '~> 1.16.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

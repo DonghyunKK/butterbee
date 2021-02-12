@@ -12,8 +12,9 @@ class CakesController < ApplicationController
   end
 
   def create
-    @cake = Cake.new(cake_params)
-    if @cake.save
+    # associate current user to prevent user must exist error
+    @cake = current_user.cakes.build(cake_params)
+    if @cake.save!
       redirect_to cake_path(@cake)
     else
       render 'new'
@@ -39,6 +40,6 @@ class CakesController < ApplicationController
   private
 
   def cake_params
-    params.require(:cake).permit(:name, :item_code)
+    params.require(:cake).permit(:name, :item_code, photos: [])
   end
 end

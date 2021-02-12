@@ -1,4 +1,12 @@
 <h2><%= @cupcake.name %></h2>
 <h4><%= @cupcake.item_code %></h4>
 
+<% @cupcake.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
 <%= link_to "Edit", edit_cupcake_path(@cupcake) %>
+<%= link_to "Delete #{@cupcake.name}",
+            cupcake_path(@cupcake),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>

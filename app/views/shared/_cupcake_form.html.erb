@@ -1,7 +1,6 @@
-<%= form_for(@cupcake) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :item_code %>
-  <%= f.text_field :item_code %>
+<%= simple_form_for(cupcake) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :item_code %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit %>
 <% end %>

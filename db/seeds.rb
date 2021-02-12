@@ -10,12 +10,12 @@ puts "Cleaning database..."
 Cake.destroy_all
 Cupcake.destroy_all
 
-# puts "Creat user"
-# admin = User.create!(
-#   email: "admin@gmail.com",
-#   password: '123456',
-#   admin: true
-# )
+puts "Creat user"
+admin = User.create!(
+  email: "admin@gmail.com",
+  password: '123456',
+  admin: true
+)
 
 
 puts "Creating cakes..."

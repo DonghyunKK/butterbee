@@ -12,8 +12,9 @@ class CupcakesController < ApplicationController
   end
 
   def create
-    @cupcake = Cupcake.new(cupcake_params)
-    if @cupcake.save
+    # associate current user to prevent user must exist error
+    @cupcake = current_user.cupcakes.build(cupcake_params)
+    if @cupcake.save!
       redirect_to cupcake_path(@cupcake)
     else
       render 'new'
@@ -39,6 +40,6 @@ class CupcakesController < ApplicationController
   private
 
   def cupcake_params
-    params.require(:cupcake).permit(:name, :item_code)
+    params.require(:cupcake).permit(:name, :item_code, photos: [])
   end
 end
