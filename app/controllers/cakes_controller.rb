@@ -13,7 +13,9 @@ class CakesController < ApplicationController
 
   def create
     # associate current user to prevent user must exist error
-    @cake = current_user.cakes.build(cake_params)
+    # @cake = current_user.cakes.build(cake_params)
+    @cake = Cake.create(cake_params)
+    @cake.user = current_user
     if @cake.save!
       redirect_to cake_path(@cake)
     else
