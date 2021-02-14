@@ -2,6 +2,7 @@
 <h4><%= @cake.item_code %></h4>
 
 <%= @cake.photos.attached? %>
+<%= @cake.photos.present? %>
 
 <% if @cake.photos.present? %>
   <% @cake.photos.each do |photo| %>

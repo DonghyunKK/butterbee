@@ -13,7 +13,9 @@ class CupcakesController < ApplicationController
 
   def create
     # associate current user to prevent user must exist error
-    @cupcake = current_user.cupcakes.build(cupcake_params)
+    # @cupcake = current_user.cupcakes.build(cupcake_params)
+    @cupcake = Cupcake.new(cupcake_params)
+    @cupcake.user = current_user
     if @cupcake.save!
       redirect_to cupcake_path(@cupcake)
     else
