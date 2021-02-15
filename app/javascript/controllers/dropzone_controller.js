@@ -150,6 +150,8 @@ function createDropZone(controller) {
     maxFilesize: controller.maxFileSize,
     acceptedFiles: controller.acceptedFiles,
     addRemoveLinks: controller.addRemoveLinks,
+    parallelUploads:5,
+    uploadMultiple:true,
     autoQueue: false
   });
 }

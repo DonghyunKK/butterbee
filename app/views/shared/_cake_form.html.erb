@@ -2,7 +2,7 @@
   <%= f.input :name %>
   <%= f.input :item_code %>
   <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
-    <%= f.file_field :photos, as: :file, input_html: { multiple: true }, direct_upload: true, data: { dropzone_target: "input" } %>
+    <%= f.file_field :photos, as: :file, input_html: { multiple: true }, multipart: true, direct_upload: true, data: { dropzone_target: "input" } %>
     <div class="dropzone-msg dz-message needsclick">
       <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
       <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg</span>
@@ -10,4 +10,3 @@
   </div>
   <%= f.submit %>
 <% end %>
-
