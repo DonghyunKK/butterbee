@@ -1,40 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-
-.continer {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  background-color: $white;
-  margin: 0 auto;
+body {
+  padding: 0;
+  margin: 0;
   width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
 }
 
-.price-container {
-  height: 100vh;
+.price-table {
   display: flex;
-  align-items: center;
   justify-content: space-around;
-  font-family: "Roboto", sans-serif;
-  background-color: $white;
-  margin: 0 auto;
-  width: 80%;
+  align-items: center;
+  width: 100%;
+  padding: 10% 0;
 }
 
 .price-card {
   color: #555;
   background-color: #fff;
   width: 30%;
-  min-width: 10rem;
-  max-width: 25rem;
+  height: 30rem;
   text-align: center;
-  margin: 0 2rem;
-  padding: 0.5rem 0 1rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 16px;
+  max-width: 20rem;
+  min-width: 20rem;
 }
 
+.info-text {
+  text-align: center;
+  padding-top: 5%;
+
+  h2 {
+    border-bottom: 2px solid $peach;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .price-table {
+    flex-direction: column;
+  }
+  
+  .price-card {
+    margin-bottom: 2rem;
+  }
+}
