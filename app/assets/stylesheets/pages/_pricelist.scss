@@ -12,7 +12,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 10% 0 5% 0;
+  padding-top: 10%;
 }
 
 .price-card {
@@ -55,14 +55,20 @@ span {
 }
 
 .allergen-right {
-  padding-bottom: 5%;
+  margin-right: 10%;
+  padding-top: 1rem;
+  p {
+    margin: 0.5rem 0;
+  }
 }
 
-// .price-card__size-right {
-//   p:last-child {
-//     font-size: 0.8rem;
-//   }
-// }
+.allergen-text {
+  float: right;
+  padding-bottom: 5%;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
 .notice {
   font-size: 0.8rem;
   padding-bottom: 1rem;
