@@ -1,0 +1,14 @@
+.btn-gradient {
+  color: white;
+  width: 10rem;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: $pink;
+  transition: background 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: $peach;
+  color: white;
+}

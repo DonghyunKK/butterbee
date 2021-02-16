@@ -1,11 +1,7 @@
 <div class="container">
   <div class="info-text">
     <h2>Design</h2>
-    <p>All cakes designs are bespoke. Please be descriptive with your request. You can choose specific designs from our gallery. And make changes; such as colour or flower choice. You can also add wording</p>
-
-    <span>Allergen Information</span>
-    <p>All cakes contain eggs, milk</p>
-    <p>(n) contain treenuts, peanuts</p>
+    <p>All cakes designs are bespoke. Please be descriptive with your request. You can choose specific designs from our gallery. <br> And make changes; such as colour or flower choice. You can also add wording</p>
   </div>
   <div class="price-table">
     <div class="price-card">
@@ -18,31 +14,38 @@
           <p>Lemon</p>
           <p>Vanilla & Fruit</p>
         </div>
-        <div class="price-card__size">
+        <div class="price-card__size-left">
           <span>Size & Price</span>
           <p>4'' (4-6 servings) &pound;30</p>
           <p>6'' (8-10 servings) &pound;35</p>
           <p>8'' (12-14 servings) &pound;80</p>
         </div>
+        <%= link_to "Discover", cakes_path, class: "btn btn-gradient discover" %>
     </div>
     <div class="price-card">
       <h2 class="price-card__title">Cupcake Boxes</h2>
         <div class="price-card__flavour">
           <span>Flavours</span>
-          <p>Black Sesame(n)</p>
           <p>Carror(n)</p>
           <p>Chocolate</p>
+          <p>Black Sesame(n)</p>
           <p>Matcha</p>
           <p>Mocha</p>
           <p>Peanut Butter(n)</p>
         </div>
-        <div class="price-card__size">
+        <div class="price-card__size-right">
           <span>Boxes & Price</span>
           <p>Box of 6 (1 flavour) &pound;24</p>
           <p>Box of 12 (1-2 flavour) &pound;48</p>
-          <p>Min. order for collection 6 / for delivery 12 Max. order 48</p>
+          <p class="notice">&#10033; Min. order for collection 6 / for delivery 12 <br> Max. order 48</p>
         </div>
-      </div>
+        <%= link_to "Discover", cupcakes_path, class: "btn btn-gradient discover" %>
+    </div>
+    </div>
+    <div class="allergen-right">
+      <span>Allergen Information</span>
+      <p>All cakes contain eggs, milk</p>
+      <p>(n) contain treenuts, peanuts</p>
     </div>
   </div>
 </div>

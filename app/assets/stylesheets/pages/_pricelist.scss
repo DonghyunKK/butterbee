@@ -4,6 +4,7 @@ body {
   width: 100%;
   height: 100vh;
   font-family: "Roboto", sans-serif;
+  background-color: $white;
 }
 
 .price-table {
@@ -11,20 +12,60 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 10% 0;
+  padding: 10% 0 5% 0;
 }
 
 .price-card {
   color: #555;
   background-color: #fff;
   width: 30%;
-  height: 30rem;
+  height: 39rem;
   text-align: center;
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 16px;
   max-width: 20rem;
   min-width: 20rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  p {
+    margin-top: 0.5rem;
+  }
+}
+
+span {
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.price-card__title {
+  border-bottom: 2px solid $peach;
+  padding-bottom: 0.5rem;
+}
+
+.price-card__flavour {
+  padding-top: 1rem;
+}
+
+.price-card__size-left {
+  padding-top: 2.5rem;
+
+  p:last-child {
+    padding-bottom: 1.9rem;
+  }
+}
+
+.allergen-right {
+  padding-bottom: 5%;
+}
+
+// .price-card__size-right {
+//   p:last-child {
+//     font-size: 0.8rem;
+//   }
+// }
+.notice {
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
 }
 
 .info-text {
@@ -36,6 +77,7 @@ body {
     padding-bottom: 0.5rem;
   }
 }
+
 
 @media screen and (max-width: 576px) {
   .price-table {
