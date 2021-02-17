@@ -54,8 +54,7 @@ span {
   }
 }
 
-.allergen-right {
-  margin-right: 10%;
+.allergen-container {
   padding-top: 1rem;
   p {
     margin: 0.5rem 0;
@@ -63,9 +62,9 @@ span {
 }
 
 .allergen-text {
-  float: right;
+  // float: right;
   padding-bottom: 5%;
-  text-align: right;
+  text-align: center;
   font-size: 0.8rem;
 }
 

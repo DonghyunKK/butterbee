@@ -12,5 +12,13 @@
 }
 
 .dropdown-toggle::after { 
-  content: none; 
-} 
+  content: none;
+}
+
+.navbar {
+  position: relative;
+}
+
+.dropdown-menu {
+  top: 130%;
+}
