@@ -1,0 +1,42 @@
+.footer {
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  padding: 0 3rem;
+  color: $brown;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: $brown;
+  // opacity: 0.5;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  transition: 0.4s;
+}
+
+.footer-links a:hover {
+  // opacity: 1;
+  color: $pink;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 429px) {
+  .footer {
+  height: 2.5rem;
+  font-size: 0.7rem;
+  padding: 0 1rem;
+}
+}
