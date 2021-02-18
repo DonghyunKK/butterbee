@@ -8,7 +8,9 @@
     <% @cakes.each do |cake| %>
       <%= link_to cake_path(cake) do %>
         <div class="box">
-          <%= cl_image_tag cake.photos.first.key, crop: :fill, class: "image" %>
+          <% if cake.photos.attached? %>
+            <%= cl_image_tag cake.photos.first.key, crop: :fill, class: "image" %>
+          <% end %>
           <div class="middle">
             <div class="text">
               <h4><%= cake.name %></h4>
@@ -21,12 +23,4 @@
   </div>
 </div>
 
-
-
-<!-- <ul>
-  <% @cakes.each do |cake| %>
-  <%= cl_image_tag cake.photos.first.key, height: 300, width: 400, crop: :fill %>
-  <li><%= link_to cake.name, cake_path(cake) %></li>
-  <% end %>
-</ul> -->
 

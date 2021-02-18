@@ -1,7 +1,24 @@
-<ul>
-  <% @cupcakes.each do |cupcake| %>
-  <li><%= link_to cupcake.name, cupcake_path(cupcake) %></li>
-  <% end %>
-</ul>
-
-<%= link_to "Create", new_cupcake_path %>
+<div class="container">
+  <div class="button_area">
+    <% if current_user && current_user.admin == true %>
+    <%= link_to "Create", new_cupcake_path, class: "btn btn-main" %>
+    <% end %>
+  </div>
+  <div class="wrapper">
+    <% @cupcakes.each do |cupcake| %>
+      <%= link_to cupcake_path(cupcake) do %>
+        <div class="box">
+          <% if cupcake.photos.attached? %>
+            <%= cl_image_tag cupcake.photos.first.key, crop: :fill, class: "image" %>
+          <% end %>
+          <div class="middle">
+            <div class="text">
+              <h4><%= cupcake.name %></h4>
+              <%= cupcake.item_code %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
