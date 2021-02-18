@@ -22,3 +22,11 @@
 .dropdown-menu {
   top: 130%;
 }
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: $peach;
+}
+
+.dropdown-item:hover {
+  background-color: $light-pink;
+}
