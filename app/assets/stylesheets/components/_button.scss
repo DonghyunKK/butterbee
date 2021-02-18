@@ -1,4 +1,4 @@
-.btn-gradient {
+.btn-main {
   color: white;
   width: 10rem;
   padding: 8px 24px;
@@ -8,7 +8,7 @@
   transition: background 0.3s ease;
 }
 
-.btn-gradient:hover {
+.btn-main:hover {
   background: $peach;
   color: white;
 }

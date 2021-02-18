@@ -1,7 +1,20 @@
-<ul>
+<div class="container">
+<div class="button_area"><%= link_to "Create", new_cake_path, class: "btn btn-main" %></div>
+  <div class="wrapper">
+    <% @cakes.each do |cake| %>
+      <%= link_to cake_path(cake) do %>
+        <%= cl_image_tag cake.photos.first.key, height: 300, width: 400, crop: :fill, class: "box" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+
+<!-- <ul>
   <% @cakes.each do |cake| %>
+  <%= cl_image_tag cake.photos.first.key, height: 300, width: 400, crop: :fill %>
   <li><%= link_to cake.name, cake_path(cake) %></li>
   <% end %>
-</ul>
+</ul> -->
 
-<%= link_to "Create", new_cake_path %>
