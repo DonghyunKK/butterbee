@@ -1,9 +1,21 @@
 <div class="container">
-<div class="button_area"><%= link_to "Create", new_cake_path, class: "btn btn-main" %></div>
+  <div class="button_area">
+    <% if current_user && current_user.admin == true %>
+    <%= link_to "Create", new_cake_path, class: "btn btn-main" %>
+    <% end %>
+  </div>
   <div class="wrapper">
     <% @cakes.each do |cake| %>
       <%= link_to cake_path(cake) do %>
-        <%= cl_image_tag cake.photos.first.key, height: 300, width: 400, crop: :fill, class: "box" %>
+        <div class="box">
+          <%= cl_image_tag cake.photos.first.key, crop: :fill, class: "image" %>
+          <div class="middle">
+            <div class="text">
+              <h4><%= cake.name %></h4>
+              <%= cake.item_code %>
+            </div>
+          </div>
+        </div>
       <% end %>
     <% end %>
   </div>
