@@ -28,6 +28,10 @@ gem 'devise'
 # add cloudinary
 gem 'cloudinary', '~> 1.16.0'
 
+gem 'bootstrap', '~> 5.0.0.beta1'
+
+gem 'jquery-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
