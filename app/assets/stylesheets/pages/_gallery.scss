@@ -18,7 +18,6 @@
   width: 100%;
   opacity: 1;
   display: block;
-  width: 100%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -33,6 +32,19 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.btn-white {
+  color: $brown;
+  border: 1px solid $brown;
+  border-radius: 0.5rem;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-white:hover {
+  opacity: 1;
 }
 
 .box:hover .image {

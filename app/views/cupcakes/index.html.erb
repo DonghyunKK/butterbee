@@ -6,8 +6,8 @@
   </div>
   <div class="wrapper">
     <% @cupcakes.each do |cupcake| %>
-      <%= link_to cupcake_path(cupcake) do %>
-        <div class="box">
+      <div class="box">
+        <%= link_to cupcake_path(cupcake) do %>
           <% if cupcake.photos.attached? %>
             <%= cl_image_tag cupcake.photos.first.key, crop: :fill, class: "image" %>
           <% end %>
@@ -16,9 +16,17 @@
               <h4><%= cupcake.name %></h4>
               <%= cupcake.item_code %>
             </div>
+            <% if current_user && current_user.admin == true %>
+              <%= link_to "Edit", edit_cupcake_path(cupcake), class: "btn btn-white" %>
+              <%= link_to "Delete",
+                cupcake_path(cupcake),
+                method: :delete,
+                class: "btn btn-white",
+                data: { confirm: "Are you sure?" } %>
+            <% end %>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
