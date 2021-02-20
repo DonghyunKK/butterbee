@@ -1,8 +1,11 @@
 <div class="container">
-  <div class="button_area">
-    <% if current_user && current_user.admin == true %>
-    <%= link_to "Create", new_cupcake_path, class: "btn btn-main" %>
-    <% end %>
+  <div class="gallery-title">
+    <h2>Cupcake Gallery</h2>
+    <div class="button_area">
+      <% if current_user && current_user.admin == true %>
+      <%= link_to "Create", new_cupcake_path, class: "btn btn-main" %>
+      <% end %>
+    </div>
   </div>
   <div class="wrapper">
     <% @cupcakes.each do |cupcake| %>

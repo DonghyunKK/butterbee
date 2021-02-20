@@ -1,8 +1,11 @@
 <div class="container">
-  <div class="button_area">
-    <% if current_user && current_user.admin == true %>
-    <%= link_to "Create", new_cake_path, class: "btn btn-main" %>
-    <% end %>
+  <div class="gallery-title">
+    <h2>Cake Gallery</h2>
+    <div class="button_area">
+      <% if current_user && current_user.admin == true %>
+      <%= link_to "Create", new_cake_path, class: "btn btn-main" %>
+      <% end %>
+    </div>
   </div>
   <div class="wrapper">
     <% @cakes.each do |cake| %>

@@ -60,3 +60,13 @@
   font-size: 16px;
   padding: 16px 32px;
 }
+
+.gallery-title {
+  text-align: center;
+  padding: 1rem 0;
+
+  h2 {
+    border-bottom: 2px solid $peach;
+    padding-bottom: 0.5rem;
+  }
+}
