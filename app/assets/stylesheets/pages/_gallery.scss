@@ -6,7 +6,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-gap: 0.5rem;
 }
 
@@ -32,6 +32,11 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-white {
@@ -70,3 +75,22 @@
     padding-bottom: 0.5rem;
   }
 }
+
+// button {
+//   appearance: auto;
+//   text-rendering: auto;
+//   color: -internal-light-dark(black, white);
+//   letter-spacing: normal;
+//   word-spacing: normal;
+//   text-transform: none;
+//   text-indent: 0px;
+//   text-shadow: none;
+//   display: inline-block;
+//   text-align: center;
+//   align-items: center;
+//   background-color: none;
+//   box-sizing: border-box;
+//   margin: 0em;
+//   padding: 0;
+//   border: none;
+// }
