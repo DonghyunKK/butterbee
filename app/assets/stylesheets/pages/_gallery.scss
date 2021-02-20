@@ -76,21 +76,25 @@
   }
 }
 
-// button {
-//   appearance: auto;
-//   text-rendering: auto;
-//   color: -internal-light-dark(black, white);
-//   letter-spacing: normal;
-//   word-spacing: normal;
-//   text-transform: none;
-//   text-indent: 0px;
-//   text-shadow: none;
-//   display: inline-block;
-//   text-align: center;
-//   align-items: center;
-//   background-color: none;
-//   box-sizing: border-box;
-//   margin: 0em;
-//   padding: 0;
-//   border: none;
-// }
+button {
+  appearance: auto;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  background-color: none;
+  box-sizing: border-box;
+  margin: 0em;
+  padding: 0;
+  border: none;
+}
+
+.btn-close:focus {
+  box-shadow: none;
+}

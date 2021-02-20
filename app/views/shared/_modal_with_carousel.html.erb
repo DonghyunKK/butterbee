@@ -13,37 +13,41 @@
       </div>
       <div class="modal-body">
         <!-- Carousel Start -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <%# <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div> %>
-          <ol class="carousel-indicators">
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
-          <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
-          </ol>
+        <!-- more than on carousel on the page, need to add cakeId -->
+        <div id="carouselExampleIndicators-<%= cake.id %>" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <a role="button" data-bs-target="#carouselExampleIndicators-<%= cake.id %>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></a>
+            <a role="button" data-bs-target="#carouselExampleIndicators-<%= cake.id %>"  data-bs-slide-to="1" aria-label="Slide 2"></a>
+            <a role="button" data-bs-target="#carouselExampleIndicators-<%= cake.id %>" data-bs-slide-to="2" aria-label="Slide 3"></a>
+          </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <%= cl_image_tag cake.photos.first.key, class: 'd-block w-100' %>
             </div>
             <% cake.photos.each_with_index do |photo, index| %>
-              <%# unless index == 0 %>
+              <% unless index == 0 %>
                 <div class="carousel-item">
                   <%= cl_image_tag photo.key, class: 'd-block w-100' %>
                 </div>
-              <%# end %>
+              <% end %>
             <% end %>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+          <%# <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-          </button>
+          </button> %>
+          <a class="carousel-control-prev" role="button" href="#carouselExampleIndicators-<%= cake.id %>" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" role="button" href="#carouselExampleIndicators-<%= cake.id %>" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
         </div>
         <!-- Carousel End -->
       </div>
