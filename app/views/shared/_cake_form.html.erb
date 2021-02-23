@@ -1,6 +1,7 @@
 <%= simple_form_for(cake) do |f| %>
   <%= f.input :name %>
   <%= f.input :item_code %>
+  <%= f.input :seasonal, :as => :boolean %>
   <!-- <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
     <%= f.file_field :photos, as: :file, input_html: { multiple: true }, multipart: true, direct_upload: true, data: { dropzone_target: "input" } %>
     <div class="dropzone-msg dz-message needsclick">

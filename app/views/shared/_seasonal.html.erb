@@ -1,0 +1,12 @@
+<div class="seasonal">
+  <% if @seasonal_cake.present? %>
+    <% @seasonal_cake.photos.each_with_index do |photo, index| %>
+      <%= cl_image_tag photo.key, crop: :fill, class: 'seasonal_image' %>
+    <% end %>
+  <% end %>
+  <% if @seasonal_cupcake.present? %>
+    <% @seasonal_cupcake.photos.each_with_index do |photo, index| %>
+      <%= cl_image_tag photo.key, crop: :fill, class: 'seasonal_image' %>
+    <% end %>
+  <% end %>
+</div>
