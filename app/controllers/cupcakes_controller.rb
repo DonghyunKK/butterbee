@@ -17,7 +17,7 @@ class CupcakesController < ApplicationController
     @cupcake = Cupcake.new(cupcake_params)
     @cupcake.user = current_user
     if @cupcake.save!
-      redirect_to cupcake_path(@cupcake)
+      redirect_to cupcakes_path
     else
       render 'new'
     end
@@ -37,6 +37,11 @@ class CupcakesController < ApplicationController
     @cupcake = Cupcake.find(params[:id])
     @cupcake.destroy
     redirect_to cupcakes_path
+  end
+
+  def move
+    @cupcake = Cupcake.find(params[:id])
+    @cupcake.insert_at(params[:position].to_i)
   end
 
   private

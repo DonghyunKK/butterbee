@@ -7,9 +7,13 @@
       <% end %>
     </div>
   </div>
-  <div class="wrapper">
-    <% @cupcakes.each do |cupcake| %>
-      <div class="box">
+  <% if current_user && current_user.admin == true %>
+    <div class="wrapper" data-controller="drag" data-drag-url="/cupcakes/:id/move">
+  <% else %>
+    <div class="wrapper">
+  <% end %>
+    <% @cupcakes.order(position: :asc).each do |cupcake| %>
+      <div class="box" data-id="<%= cupcake.id %>">
         <% if cupcake.photos.attached? %>
           <%= render '/shared/modal_with_carousel', cake: cupcake %>
         <% end %>

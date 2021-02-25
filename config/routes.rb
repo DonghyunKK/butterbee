@@ -10,5 +10,9 @@ Rails.application.routes.draw do
       patch :move
     end
   end
-  resources :cupcakes
+  resources :cupcakes do
+    member do
+      patch :move
+    end
+  end
 end

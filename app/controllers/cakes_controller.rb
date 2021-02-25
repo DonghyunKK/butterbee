@@ -17,7 +17,7 @@ class CakesController < ApplicationController
     @cake = Cake.new(cake_params)
     @cake.user = current_user
     if @cake.save!
-      redirect_to cake_path(@cake)
+      redirect_to cakes_path
     else
       render 'new'
     end
