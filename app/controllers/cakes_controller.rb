@@ -39,6 +39,11 @@ class CakesController < ApplicationController
     redirect_to cakes_path
   end
 
+  def move
+    @cake = Cake.find(params[:id])
+    @cake.insert_at(params[:position].to_i)
+  end
+
   private
 
   def cake_params
