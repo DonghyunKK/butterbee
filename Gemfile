@@ -34,6 +34,9 @@ gem 'jquery-rails'
 
 gem 'dropzonejs-rails'
 
+# mail_form for order form
+gem 'mail_form'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

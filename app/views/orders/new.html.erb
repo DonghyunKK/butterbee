@@ -1,0 +1,15 @@
+<div class="container">
+  <%= simple_form_for(@order) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.text_area :message,
+                    rows: 8,
+                    cols: 40,
+                    required: true,
+                    placeholder: "Your Message"%><br>
+    <div class= "hidden d-none">
+      <%= f.text_field :nickname %>
+    </div>
+    <%= f.submit class: "btn-main" %>
+  <% end %>
+</div>
