@@ -26,7 +26,8 @@ require("channels")
 import "bootstrap";
 import "controllers"
 import { navbarActive } from "../components/navbar";
-import "dropzone"
+import "dropzone/dist/min/dropzone.min.css";
+import "dropzone/dist/min/basic.min.css";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
