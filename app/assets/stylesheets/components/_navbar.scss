@@ -20,8 +20,13 @@
   height: 5rem;
 }
 
+.navbar-nav > li{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .dropdown-menu {
-  top: 145%;
+  top: 143%;
 }
 
 .dropdown-item.active, .dropdown-item:active {
