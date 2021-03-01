@@ -47,6 +47,6 @@ class CupcakesController < ApplicationController
   private
 
   def cupcake_params
-    params.require(:cupcake).permit(:name, :item_code, photos: [])
+    params.require(:cupcake).permit(:name, :item_code, :seasonal, photos: [])
   end
 end

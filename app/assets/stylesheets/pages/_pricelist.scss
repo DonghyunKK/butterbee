@@ -1,30 +1,21 @@
-body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  font-family: "Roboto", sans-serif;
-  background-color: $white;
-}
-
 .price-table {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 .price-card {
   color: #555;
   background-color: #fff;
-  width: 30%;
-  height: 39rem;
+  width: 45%;
+  height: 50rem;
   text-align: center;
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 16px;
-  max-width: 20rem;
+  max-width: 24rem;
   min-width: 20rem;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   p {
@@ -42,16 +33,30 @@ span {
   padding-bottom: 0.5rem;
 }
 
-.price-card__flavour {
+.price-card__flavour__cake {
   padding-top: 1rem;
+  p {
+    padding-top: 1rem;
+  }
+}
+
+.price-card__flavour__cupcake {
+  padding-top: 1rem;
+  p:first-of-type {
+    padding-top: 1rem;
+  }
 }
 
 .price-card__size-left {
-  padding-top: 2.5rem;
+  padding-top: 3.6rem;
 
   p:last-child {
-    padding-bottom: 1.9rem;
+    padding-bottom: 0.6rem;
   }
+}
+
+.price-card__size-right {
+  padding-top: 2rem;
 }
 
 .allergen-container {
@@ -81,6 +86,10 @@ span {
     border-bottom: 2px solid $peach;
     padding-bottom: 0.5rem;
   }
+
+  p {
+    font-size: 1.1rem;
+  }
 }
 
 
@@ -91,5 +100,10 @@ span {
   
   .price-card {
     margin-bottom: 2rem;
+    height: 53rem;
   }
+
+  .price-card__size-left {
+  padding-top: 2rem;
+}
 }

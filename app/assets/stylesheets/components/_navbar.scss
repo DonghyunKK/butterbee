@@ -1,14 +1,15 @@
-.navbar-lewagon {
+.navbar-butterbee {
   justify-content: space-between;
   background: white;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-butterbee .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-butterbee .navbar-brand img {
+  width: 11rem;
+  height: 9rem;
 }
 
 .dropdown-toggle::after { 
@@ -16,13 +17,23 @@
 }
 
 .navbar {
+  font-family: "Playfair Display", "serif";
   position: relative;
-  height: 5rem;
+  // height: 9rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $brown;
+}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active {
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .navbar-nav > li{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .dropdown-menu {
@@ -44,4 +55,22 @@
 .navbar-toggler:hover {
   box-shadow: 0 0 0 0.1rem;
   transition: box-shadow 0.25s ease-in-out;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar-butterbee .navbar-brand img {
+  width: 9rem;
+  height: 8rem;
+  }
+
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-nav > li{
+  padding: 0;
+  font-size: 1rem;
+  }
 }

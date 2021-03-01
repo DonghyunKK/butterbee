@@ -1,18 +1,19 @@
 <div class="container">
   <div class="info-text">
-    <h2>Design</h2>
-    <p>All cakes designs are bespoke. Please be descriptive with your request. You can choose specific designs from our gallery. <br> And make changes; such as colour or flower choice. You can also add wording</p>
+    <h2>Menu</h2>
+    <br>
+    <p>All cake designs are bespoke and tailored to your design requests.<br><br>Please take a look at our Gallery for inspiration.<br> You can choose from our designs, merge designs or/and suggest your own idea. <br>We are most happy to create your ideal cake with you.</p>
   </div>
   <div class="price-table">
     <div class="price-card">
       <h2 class="price-card__title">Celebration Cakes</h2>
-        <div class="price-card__flavour">
+        <div class="price-card__flavour__cake">
           <span>Flavours</span>
-          <p>Carror(n)</p>
-          <p>Chocolate</p>
-          <p>Coconut Cream & Fruit</p>
-          <p>Lemon</p>
-          <p>Vanilla & Fruit</p>
+          <p>Carrot Cake with Cream Cheese Buttercream Filling & Vanilla Buttercream (n)</p>
+          <p>Chocolate Cake with Chocolate Hazelnut Buttercream Filling & Vanilla Buttercream (n)</p>
+          <p>Coconut Cake with Coconut Ganache, Fruit (Peach/Kiwi) Filling & Vanilla Buttercream</p>
+          <p>Lemon Cake with Vanilla Buttercream</p>
+          <p>Vanilla Cake with Fruit (Strawberry/Peach/Kiwi) Filling & Vanilla Buttercream</p>
         </div>
         <div class="price-card__size-left">
           <span>Size & Price</span>
@@ -20,32 +21,33 @@
           <p>6'' (8-10 servings) &pound;35</p>
           <p>8'' (12-14 servings) &pound;80</p>
         </div>
-        <%= link_to "Discover", cakes_path, class: "btn btn-main discover" %>
+        <%= link_to "Order", new_order_path, class: "btn btn-main discover" %>
     </div>
     <div class="price-card">
       <h2 class="price-card__title">Cupcake Boxes</h2>
-        <div class="price-card__flavour">
+        <div class="price-card__flavour__cupcake">
           <span>Flavours</span>
-          <p>Carror(n)</p>
-          <p>Chocolate</p>
-          <p>Black Sesame(n)</p>
-          <p>Matcha</p>
-          <p>Mocha</p>
-          <p>Peanut Butter(n)</p>
+          <p>Carrot Cake with Cream Cheese Frosting & Vanilla Buttercream (n)</p>
+          <p>Chocolate Cake with Chocolate Hazelnut Frosting & Vanilla Buttercream (n)</p>
+          <p>Black Sesame Cake with Sesame Tahini Frosting & Vanilla Buttercream (s)</p>
+          <p>Matcha Cake with Matcha & Vanilla Buttercream</p>
+          <p>Mocha Cake with Espresso & Vanilla Buttercream</p>
+          <p>Peanut Butter Cake with Peanut Butter Frosting & Vanilla Buttercream (n)</p>
         </div>
         <div class="price-card__size-right">
           <span>Boxes & Price</span>
           <p>Box of 6 (1 flavour) &pound;24</p>
-          <p>Box of 12 (1-2 flavour) &pound;48</p>
-          <p class="notice">&#10033; Min. order for collection 6 / for delivery 12 <br> Max. order 48</p>
+          <p>Box of 12 (1-2 flavour) &pound;44</p>
+          <p class="notice"> &#10033; Min. order 6 / Max. order 48</p>
         </div>
-        <%= link_to "Discover", cupcakes_path, class: "btn btn-main discover" %>
+        <%= link_to "Order", cupcakes_path, class: "btn btn-main discover" %>
     </div>
   </div>
     <div class="allergen-container">
       <div class="allergen-text">
         <p>All cakes contain eggs, milk</p>
-        <p>(n) contain treenuts, peanuts</p>
+        <p>(n) contains treenuts, peanuts</p>
+        <p>(s) contains sesame</p>
       </div>
     </div>
 </div>
