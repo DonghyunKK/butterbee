@@ -1,4 +1,4 @@
-class Order < MailForm::Base
+class Order < ApplicationMailer
   attributes :name, validate: true
   attributes :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attributes :message
