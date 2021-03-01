@@ -93,7 +93,7 @@ Rails.application.configure do
 
   # Set up ActionMailer 
   config.action_mailer.default_url_options = { host: 'wwww.butterbeebakery.co.uk'}
-  config.action_mailer.delivery_method = :stmp
+  config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'],
