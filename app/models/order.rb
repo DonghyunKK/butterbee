@@ -8,7 +8,7 @@ class Order < MailForm::Base
     {
       #this is the subject for the email generated, it can be anything you want
       subject: "My Order Form",
-      to: 'wooow1454@gmail.com',
+      to: 'donghyunkim524@gmail.com',
       from: %("#{name}" <#{email}>)
       #the from will display the name entered by the user followed by the email
     }
