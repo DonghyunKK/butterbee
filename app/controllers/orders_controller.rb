@@ -10,10 +10,10 @@ class OrdersController < ApplicationController
     @order.request = request
     if @order.deliver
       flash.now[:notice] = 'Thank you for your message!'
-      render :index
+      render :new
     else
       flash.now[:error] = 'Cannot send message.'
-      render :index
+      render :new
     end
   end
 
