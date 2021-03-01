@@ -92,18 +92,18 @@ Rails.application.configure do
   config.force_ssl = true
 
   # Set up ActionMailer 
-  # config.action_mailer.default_url_options = { host: 'https://www.butterbeebakery.co.uk'}
-  # config.action_mailer.delivery_method = :stmp
+  config.action_mailer.default_url_options = { host: 'https://www.butterbeebakery.co.uk'}
+  config.action_mailer.delivery_method = :stmp
 
-  # ActionMailer::Base.smtp_settings = {
-  #   :user_name => ENV['SENDGRID_USERNAME'],
-  #   :password => ENV['SENDGRID_PASSWORD'],
-  #   :domain => 'example.com',
-  #   :address => 'smtp.sendgrid.net',
-  #   :port => 587,
-  #   :authentication => :plain,
-  #   :enable_starttls_auto => true
-  # }
+  ActionMailer::Base.smtp_settings = {
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'butterbeebakery.co.uk',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
