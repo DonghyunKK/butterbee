@@ -92,13 +92,13 @@ Rails.application.configure do
   config.force_ssl = true
 
   # Set up ActionMailer 
-  config.action_mailer.default_url_options = { host: 'app203414740@heroku.com'}
+  config.action_mailer.default_url_options = { host: 'wwww.butterbeebakery.co.uk'}
   config.action_mailer.delivery_method = :stmp
 
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'],
     :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'heroku.com',
+    :domain => 'wwww.butterbeebakery.co.uk',
     :address => 'smtp.sendgrid.net',
     :port => 587,
     :authentication => :plain,
