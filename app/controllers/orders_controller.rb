@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :order_params, only: [:create]
+
   def new
     @order = Order.new
   end
@@ -7,11 +9,17 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:order])
     @order.request = request
     if @order.deliver
-      flash.now[:error] = nil
-      render :new
+      flash.now[:notice] = 'Thank you for your message!'
+      render :index
     else
-      flash.now[:error] = 'Can not send message.'
-      render :new
+      flash.now[:error] = 'Cannot send message.'
+      render :index
     end
+  end
+
+  private
+
+  def order_params
+    params.require(:order).permit(:name, :email, :message, :nickname, :captcha)
   end
 end
