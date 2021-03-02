@@ -4,6 +4,7 @@ class Order < MailForm::Base
   attribute :message
   attribute :size
   attribute :collection
+  attribute :flavour
   attribute :photos, attachment: true
   attribute :nickname, captcha: true
 

@@ -2,7 +2,7 @@
   <%= simple_form_for(@order) do |f| %>
     <%= f.input :name %>
     <%= f.input :email %>
-    <%= f.input :collection, as: :radio_buttons, collection: [['0', 'Pick Up'], ['1', 'Delivery']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline' %>
+    <%= f.input :collection, as: :radio_buttons, collection: [['0', 'Pick Up (From London W5 / 9:00 to 13:00)'], ['1', 'Delivery']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline' %>
     <%= f.input :size, :collection => ['4\'\' (4-6 servings) £30', '6\'\' (8-10 servings) £35', '8\'\' (12-14 servings) £80'] %>
     <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
       <%= f.file_field :photos, as: :file, multiple: true, direct_upload: true, data: { dropzone_target: "input" } %>
@@ -10,7 +10,14 @@
         <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
         <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg</span>
       </div>
-    </div> 
+    </div>
+    <%= f.input :flavour, :collection => 
+      ['Carrot Cake with Cream Cheese Buttercream Filling & Vanilla Buttercream (n)', 
+      'Chocolate Cake with Chocolate Hazelnut Buttercream Filling & Vanilla Buttercream (n)', 
+      'Coconut Cake with Coconut Ganache, Fruit (Peach/Kiwi) Filling & Vanilla Buttercream', 
+      'Lemon Cake with Vanilla Buttercream', 
+      'Vanilla Cake with Fruit (Strawberry/Peach/Kiwi) Filling & Vanilla Buttercream'] %>
+        <p> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts / (s) contains sesame</p>
     <%= f.text_area :message,
                     rows: 8,
                     cols: 40,
