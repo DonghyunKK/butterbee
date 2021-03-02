@@ -2,6 +2,9 @@ class Order < MailForm::Base
   attribute :name, validate: true
   attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message
+  attribute :size
+  attribute :collection
+  attribute :photos, attachment: true
   attribute :nickname, captcha: true
 
   def headers
