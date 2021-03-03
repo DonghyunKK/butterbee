@@ -9,6 +9,7 @@
     "@rails/webpacker": "4.3.0",
     "bootstrap": "^5.0.0-beta2",
     "dropzone": "^5.7.6",
+    "flatpickr": "^4.6.9",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "sortablejs": "^1.13.0",
