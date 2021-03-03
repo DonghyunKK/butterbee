@@ -1,10 +1,11 @@
-class Order < MailForm::Base
+class CakeOrder < MailForm::Base
   attribute :name, validate: true
   attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message
   attribute :size
   attribute :collection
   attribute :flavour
+  attribute :cake_design
   attribute :starts_at
   attribute :photos, attachment: true
   attribute :nickname, captcha: true

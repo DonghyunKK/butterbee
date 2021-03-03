@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="info-text">
+    <h2>Cake Order</h2>
+    <br>
+    <p>All cake designs can be tailored to your design requests.<br>Please take a look at our Gallery for inspiration.<br><br> You may choose one of our complete designs. <br>Or choose a design and change aspects such as colour, flowers, add text etc.<br> Or submit a complete custom order. </p>
+  </div>
+  <div class="form-box">
+  <%= simple_form_for(@cake_order) do |f| %>
+    <h3>Your Cake</h3>
+    <%= f.input :size, :collection => ['4\'\' (4-6 servings) £30', '6\'\' (8-10 servings) £35', '8\'\' (12-14 servings) £80'], input_html: {class: "form-select"}, prompt: 'Select Size' %>
+    <%= f.input :flavour, :collection => 
+      ['Carrot Cake with Cream Cheese Buttercream Filling & Vanilla Buttercream (n)', 
+      'Chocolate Cake with Chocolate Hazelnut Buttercream Filling & Vanilla Buttercream (n)', 
+      'Coconut Cake with Coconut Ganache, Fruit (Peach/Kiwi) Filling & Vanilla Buttercream',
+      'Lemon Cake with Vanilla Buttercream', 
+      'Vanilla Cake with Fruit (Strawberry/Peach/Kiwi) Filling & Vanilla Buttercream'], input_html: {class: "form-select"}, prompt: 'Select Flavour' %>
+      <p> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts </p>
+    <%= f.input :cake_design, collection: @cakes_list, label: 'Design', prompt: 'If you would like one of our designs please select here.', input_html: {class: "form-select"} %>
+    <span class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design please upload pictures below and include description below.</span>
+    <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
+      <%= f.file_field :photos, as: :file, multiple: true, direct_upload: true, data: { dropzone_target: "input" } %>
+      <div class="dropzone-msg dz-message needsclick">
+        <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
+        <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg</span>
+      </div>
+    </div>
+    <%= f.text_area :message,
+                    rows: 10,
+                    cols: 60,
+                    required: true,
+                    placeholder: "Your Message"%><br>
+    <div class= "hidden d-none">
+      <%= f.text_field :nickname %>
+    </div>
+    <h3>Your Details</h3>
+    <%= f.input :name, placeholder: 'Enter your name' %>
+    <%= f.input :email, placeholder: 'Enter your Email' %>
+    <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['0', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['1', 'London Delivery (subject to availability) ']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
+    <%= f.input :starts_at, as: :string, required: false, label: 'Due date', input_html: {class: "datepicker"} %>
+    <%= f.submit class: "btn-order" %>
+  <% end %>
+  </div>
+</div>
