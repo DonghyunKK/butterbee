@@ -29,6 +29,11 @@ import { navbarActive } from "../components/navbar";
 import "dropzone/dist/min/dropzone.min.css";
 import "dropzone/dist/min/basic.min.css";
 
+//Flatpickr
+import { initFlatpickr } from "../plugins/flatpickr";
+import "flatpickr/dist/flatpickr.min.css"
+require("flatpickr/dist/themes/airbnb.css");
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -36,4 +41,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   navbarActive();
+  initFlatpickr();
 });
