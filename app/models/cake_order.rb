@@ -9,7 +9,7 @@ class CakeOrder < MailForm::Base
   attribute :address
   attribute :postcode
   attribute :due_date, validate: true
-  attribute :file, attachment: true
+  attribute :photo, attachment: true
   attribute :nickname, captcha: true
 
   def headers
@@ -20,13 +20,5 @@ class CakeOrder < MailForm::Base
       from: %("#{name}" <#{email}>)
       #the from will display the name entered by the user followed by the email
     }
-  end
-
-  def attatch_photos
-    @cake_order = cake_order
-     if cake_order.file
-       attachment_name = cake_order.file.original_filename
-       attachments[attachment_name] = cake_order.file.read
-     end
   end
 end

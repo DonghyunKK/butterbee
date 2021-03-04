@@ -5,7 +5,7 @@
     <p>All cake designs can be tailored to your design requests.<br>Please take a look at our Gallery for inspiration.<br><br> You may choose one of our complete designs. <br>Or choose a design and change aspects such as colour, flowers, add text etc.<br> Or submit a complete custom order. </p>
   </div>
   <div class="form-box">
-  <%= simple_form_for @cake_order, html: { multipart: true } do |f| %>
+  <%= simple_form_for(@cake_order) do |f| %>
     <h3>Your Cake</h3>
     <%= f.input :size, :collection => ['4\'\' (4-6 servings) £30', '6\'\' (8-10 servings) £35', '8\'\' (12-14 servings) £80'], input_html: {class: "form-select"}, prompt: 'Select Size' %>
     <%= f.input :flavour, :collection => 
@@ -24,7 +24,7 @@
         <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg</span>
       </div>
     </div>-->
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.file_field :photo, as: :file %>
     <%= f.text_area :message,
                     rows: 10,
                     cols: 60,

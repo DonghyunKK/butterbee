@@ -25,6 +25,6 @@ class CakeOrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:cake_order).permit(:name, :email, :message, :nickname, :captcha, :size, :flavour, :cake_design, :due_date, :collection, :address, :postcode, photos: [])
+    params.require(:cake_order).permit(:name, :email, :message, :nickname, :captcha, :size, :flavour, :cake_design, :due_date, :collection, :address, :postcode, :photo)
   end
 end
