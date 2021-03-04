@@ -5,7 +5,7 @@
     <p>All cake designs can be tailored to your design requests.<br>Please take a look at our Gallery for inspiration.<br><br> You may choose one of our complete designs. <br>Or choose a design and change aspects such as colour, flowers, add text etc.<br> Or submit a complete custom order. </p>
   </div>
   <div class="form-box">
-  <%= simple_form_for(@cake_order), html: { multipart: true } do |f| %>
+  <%= simple_form_for @cake_order, html: { multipart: true } do |f| %>
     <h3>Your Cake</h3>
     <%= f.input :size, :collection => ['4\'\' (4-6 servings) £30', '6\'\' (8-10 servings) £35', '8\'\' (12-14 servings) £80'], input_html: {class: "form-select"}, prompt: 'Select Size' %>
     <%= f.input :flavour, :collection => 
