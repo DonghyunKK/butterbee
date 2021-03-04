@@ -17,13 +17,14 @@
       <p class="small-notice"> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts </p>
     <%= f.input :cake_design, collection: @cakes_list, label: 'Design', prompt: 'If you would like one of our designs please select here.', input_html: {class: "form-select"} %>
     <span class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures below and include description below.</span>
-    <div class="dropzone dropzone-default dz-clickable" id="dropzone-style" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
+    <!--<div class="dropzone dropzone-default dz-clickable" id="dropzone-style" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
       <%= f.file_field :photos, as: :file, multiple: true, direct_upload: true, data: { dropzone_target: "input" } %>
       <div class="dropzone-msg dz-message needsclick">
         <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
         <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg</span>
       </div>
-    </div>
+    </div>-->
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.text_area :message,
                     rows: 10,
                     cols: 60,
