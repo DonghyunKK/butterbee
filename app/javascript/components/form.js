@@ -1,6 +1,6 @@
 const showform = () => {
-  const firstInput = document.getElementById("cake_order_collection_0")
-  const secondInput = document.getElementById("cake_order_collection_1")
+  const firstInput = document.getElementById("cake_order_collection_pick_up")
+  const secondInput = document.getElementById("cake_order_collection_delivery")
 
   firstInput.addEventListener('click', (e) => {
     document.querySelector('.delivery-option').style.display = 'none'
