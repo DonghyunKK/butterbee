@@ -14,7 +14,7 @@ class CakeOrdersController < ApplicationController
     @cake_order.request = request
     if @cake_order.deliver
       flash.now[:notice] = 'Thank you for your message!'
-      render :new
+      redirect_to(root_path)
     else
       flash.now[:error] = 'Cannot send message.'
       render :new
