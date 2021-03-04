@@ -1,6 +1,7 @@
-.dropzone {
+#dropzone-style {
   border: 2px gray dashed;
   border-radius: 0.5rem;
+  margin: 0.25rem;
   &.dz-drag:hover {
     border: 2px #000 dashed;
     border-radius: 0.5rem;

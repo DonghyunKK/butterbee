@@ -18,12 +18,13 @@ class CakeOrdersController < ApplicationController
     else
       flash.now[:error] = 'Cannot send message.'
       render :new
+      # redirect_to(new_cake_order_path)
     end
   end
 
   private
 
   def order_params
-    params.require(:cake_order).permit(:name, :email, :message, :nickname, :captcha)
+    params.require(:cake_order).permit(:name, :email, :message, :nickname, :captcha, :size, :flavour, :cake_design, :due_date, :collection, :address, :postcode)
   end
 end

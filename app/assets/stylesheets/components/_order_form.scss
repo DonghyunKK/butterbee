@@ -51,6 +51,11 @@ textarea:focus {
   }
 }
 
+.small-notice {
+  font-size: 0.75rem;
+  margin-left: 1rem;
+}
+
 .form-box {
   width: 70%;
   padding-top: 5%;
@@ -64,7 +69,7 @@ label {
 
 .photo-label {
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
 
@@ -76,6 +81,23 @@ form {
 .form-group {
   margin: 0 auto 1.25rem auto;
   padding: 0.25rem;
+}
+
+.form-group.cake_order_flavour {
+  margin: 0 auto;
+}
+
+.form-group.cake_order_address {
+  display: inline-block;
+  width: 40%;
+}
+
+.form-group.cake_order_postcode {
+  display: inline-block;
+}
+
+.delivery-option {
+  display: none;
 }
 
 .form-control:focus {
