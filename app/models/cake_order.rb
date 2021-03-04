@@ -21,4 +21,12 @@ class CakeOrder < MailForm::Base
       #the from will display the name entered by the user followed by the email
     }
   end
+
+  def attatch_photos
+    @cake_order = cake_order
+     if cake_order.file
+       attachment_name = cake_order.file.original_filename
+       attachments[attachment_name] = cake_order.file.read
+     end
+  end
 end
