@@ -36,7 +36,7 @@
     <%= f.input :name, placeholder: 'Enter your name' %>
     <%= f.input :email, placeholder: 'Enter your Email' %>
     <%= f.input :due_date, as: :string, required: false, label: 'Due date', input_html: {class: "datepicker"} %>
-    <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['0', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['1', 'London Delivery (subject to availability)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
+    <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
     <div class="delivery-option">
       <%= f.input :address, placeholder: 'Enter your address', required: true %>
       <%= f.input :postcode, placeholder: 'Enter your postcode', required: true %>
