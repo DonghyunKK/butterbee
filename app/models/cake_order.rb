@@ -9,8 +9,8 @@ class CakeOrder < MailForm::Base
   attribute :address
   attribute :postcode
   attribute :due_date, validate: true
-  attributes :photos, attachment: true, has_many_attachments: true
-  # attributes :photo, attachment: true
+  # attributes :photos, attachment: true, has_many_attachments: true
+  attributes :photos, attachment: true
   attribute :nickname, captcha: true
 
   def headers
