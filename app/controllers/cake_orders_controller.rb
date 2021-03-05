@@ -11,6 +11,11 @@ class CakeOrdersController < ApplicationController
 
   def create
     @cake_order = CakeOrder.new(params[:cake_order])
+      # unless params[:photos].nil?
+      #   params[:photos].each do |pic|
+      #   @cake_order.photos << CakeOrder.create(:photo => pic.tempfile, :filename => pic.original_filename, :mime_type => pic.content_type, :photo_name => pic.original_filename)
+      #  end
+      # end
     @cake_order.request = request
     if @cake_order.deliver
       flash.now[:notice] = 'Thank you for your message!'
@@ -25,6 +30,6 @@ class CakeOrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:cake_order).permit(:name, :email, :message, :nickname, :captcha, :size, :flavour, :cake_design, :due_date, :collection, :address, :postcode, photo: [])
+    params.require(:cake_order).permit(:name, :email, :message, :nickname, :captcha, :size, :flavour, :cake_design, :due_date, :collection, :address, :postcode, :photos)
   end
 end

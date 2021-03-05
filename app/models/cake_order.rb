@@ -9,7 +9,8 @@ class CakeOrder < MailForm::Base
   attribute :address
   attribute :postcode
   attribute :due_date, validate: true
-  attribute :photos, attachment: true
+  attributes :photos, attachment: true, has_many_attachments: true
+  # attributes :photo, attachment: true
   attribute :nickname, captcha: true
 
   def headers
@@ -22,9 +23,9 @@ class CakeOrder < MailForm::Base
     }
   end
 
-  def attachments
-    cake_order.object_attachments.each do |attachment|
-      attachments[attachment.attachment_file_file_name] = File.read(attachment.attachment_file.path)
-    end
-  end
+  # def attachments
+  #   cake_order.photos.each do |attachment|
+  #     attachments[attachment.attachment_file_file_name] = File.read(attachment.attachment_file.path)
+  #   end
+  # end
 end
