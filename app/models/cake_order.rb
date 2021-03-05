@@ -9,7 +9,7 @@ class CakeOrder < MailForm::Base
   attribute :address
   attribute :postcode
   attribute :due_date, validate: true
-  attribute :photo, attachment: true
+  attribute :photos, attachment: true, has_many_attachment: true
   attribute :nickname, captcha: true
 
   def headers
@@ -20,5 +20,11 @@ class CakeOrder < MailForm::Base
       from: %("#{name}" <#{email}>)
       #the from will display the name entered by the user followed by the email
     }
+  end
+
+  def attachments
+    cake_order.object_attachments.each do |attachment|
+      attachments[attachment.attachment_file_file_name] = File.read(attachment.attachment_file.path)
+    end
   end
 end
