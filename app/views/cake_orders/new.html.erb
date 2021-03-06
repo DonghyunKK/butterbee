@@ -16,17 +16,13 @@
       'Vanilla Cake with Fruit (Strawberry/Peach/Kiwi) Filling & Vanilla Buttercream'], input_html: {class: "form-select"}, prompt: 'Select Flavour' %>
       <p class="small-notice"> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts </p>
     <%= f.input :cake_design, collection: @cakes_list, label: 'Design', prompt: 'If you would like one of our designs please select here.', input_html: {class: "form-select"} %>
-    <span class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures below and include description below.</span>
-    <!--<div class="dropzone dropzone-default dz-clickable" id="dropzone-style" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
-      <%= f.file_field :photos, as: :file, multiple: true, data: { dropzone_target: "input" } %>
-      <div class="dropzone-msg dz-message needsclick">
-        <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
-        <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg</span>
-      </div>
-    </div>-->
-    <%= f.file_field :photo1, as: :file %>
-    <%= f.file_field :photo2, as: :file %>
-    <%= f.file_field :photo3, as: :file %>
+    <label class="select optional" for="photo-area">Custom</label>
+    <div class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures below and include description below.</div>
+    <div class="photo-area">
+      <%= f.file_field :photo1, as: :file, input_html: {class: "photo-input"} %>
+      <%= f.file_field :photo2, as: :file, input_html: {class: "photo-input"} %>
+      <%= f.file_field :photo3, as: :file, input_html: {class: "photo-input"} %>
+    </div>
     <%= f.text_area :message,
                     rows: 10,
                     cols: 60,
@@ -35,7 +31,7 @@
     <div class= "hidden d-none">
       <%= f.text_field :nickname %>
     </div>
-    <h3>Your Details</h3>
+    <h3 class="h3-padding-top">Your Details</h3>
     <%= f.input :name, placeholder: 'Enter your name' %>
     <%= f.input :email, placeholder: 'Enter your Email' %>
     <%= f.input :due_date, as: :string, required: false, label: 'Due date', input_html: {class: "datepicker"} %>
@@ -44,7 +40,7 @@
       <%= f.input :address, placeholder: 'Enter your address', required: true %>
       <%= f.input :postcode, placeholder: 'Enter your postcode', required: true %>
     </div>
-    <%= f.submit class: "btn-order" %>
+    <%= f.submit 'Send Cake Order', class: "btn-order" %>
   <% end %>
   </div>
 </div>

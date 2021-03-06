@@ -33,6 +33,7 @@ import "dropzone/dist/min/basic.min.css";
 import { initFlatpickr } from "../plugins/flatpickr";
 import "flatpickr/dist/flatpickr.min.css"
 import { showform } from "../components/form";
+import { fetchFeed, insta } from "../components/instagram"
 require("flatpickr/dist/themes/airbnb.css");
 
 // Internal imports, e.g:
@@ -44,4 +45,5 @@ document.addEventListener('turbolinks:load', () => {
   navbarActive();
   initFlatpickr();
   showform();
+  fetchFeed();
 });

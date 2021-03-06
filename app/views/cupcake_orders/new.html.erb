@@ -5,19 +5,9 @@
     <p>All cake designs are bespoke and tailored to your design requests.<br><br>Please take a look at our Gallery for inspiration.<br> You can choose from our designs, merge designs or/and suggest your own idea. <br>We are most happy to create your ideal cake with you.</p>
   </div>
   <%= simple_form_for(@cupcake_order) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :email %>
-    <%= f.input :cupcake_name, collection: @cupcakes_list %>
-    <%= f.input :collection, as: :radio_buttons, collection: [['0', 'Pick Up (From London W5 / 9:00 to 13:00)'], ['1', 'Delivery']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline' %>
+    <h3>Your Cupcake</h3>
     <%= f.input :boxes, :collection => ['Box of 6 (1 flavour) £24', 'Box of 12 (1-2 flavour) £44'] %>
     <p> &#10033; Min. order 6 / Max. order 48 </p>
-    <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
-      <%= f.file_field :photos, as: :file, multiple: true, direct_upload: true, data: { dropzone_target: "input" } %>
-      <div class="dropzone-msg dz-message needsclick">
-        <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
-        <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg</span>
-      </div>
-    </div>
     <%= f.input :flavour, :collection => 
       ['Carrot Cake with Cream Cheese Frosting & Vanilla Buttercream (n)', 
       'Chocolate Cake with Chocolate Hazelnut Frosting & Vanilla Buttercream (n)', 
@@ -26,15 +16,31 @@
       'Mocha Cake with Espresso & Vanilla Buttercream',
       'Peanut Butter Cake with Peanut Butter Frosting & Vanilla Buttercream (n)'] %>
         <p> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts / (s) contains sesame</p>
-    <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :cupcake_design, collection: @cupcakes_list, label: 'Design', prompt: 'If you would like one of our designs please select here.', input_html: {class: "form-select"} %>
+    <label class="select optional" for="photo-area">Custom</label>
+    <div class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures below and include description below.</div>
+    <div class="photo-area">
+      <%= f.file_field :photo1, as: :file, input_html: {class: "photo-input"} %>
+      <%= f.file_field :photo2, as: :file, input_html: {class: "photo-input"} %>
+      <%= f.file_field :photo3, as: :file, input_html: {class: "photo-input"} %>
+    </div>
     <%= f.text_area :message,
-                    rows: 8,
-                    cols: 40,
+                    rows: 10,
+                    cols: 60,
                     required: true,
                     placeholder: "Your Message"%><br>
     <div class= "hidden d-none">
       <%= f.text_field :nickname %>
     </div>
-    <%= f.submit class: "btn-order" %>
+    <h3 class="h3-padding-top">Your Details</h3>
+    <%= f.input :name, placeholder: 'Enter your name' %>
+    <%= f.input :email, placeholder: 'Enter your Email' %>
+    <%= f.input :due_date, as: :string, required: false, label: 'Due date', input_html: {class: "datepicker"} %>
+    <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
+    <div class="delivery-option">
+      <%= f.input :address, placeholder: 'Enter your address', required: true %>
+      <%= f.input :postcode, placeholder: 'Enter your postcode', required: true %>
+    </div>
+    <%= f.submit 'Send Cupcake Order', class: "btn-order" %>
   <% end %>
 </div>

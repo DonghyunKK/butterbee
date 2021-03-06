@@ -9,7 +9,6 @@ class CakeOrder < MailForm::Base
   attribute :address
   attribute :postcode
   attribute :due_date, validate: true
-  # attributes :photos, attachment: true, has_many_attachments: true
   attribute :photo1, attachment: true
   attribute :photo2, attachment: true
   attribute :photo3, attachment: true
