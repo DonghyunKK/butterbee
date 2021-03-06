@@ -24,7 +24,9 @@
         <span class="dropzone-msg-desc">2 MB file size maximum. Allowed file types png, jpg</span>
       </div>
     </div>-->
-    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.file_field :photo1, as: :file %>
+    <%= f.file_field :photo2, as: :file %>
+    <%= f.file_field :photo3, as: :file %>
     <%= f.text_area :message,
                     rows: 10,
                     cols: 60,

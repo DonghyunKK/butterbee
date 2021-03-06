@@ -13,18 +13,17 @@ class CakeOrdersController < ApplicationController
     @cake_order = CakeOrder.new(params[:cake_order])
     @cake_order.request = request
     if @cake_order.deliver
-      flash.now[:notice] = 'Thank you for your message!'
+      flash.now[:notice] = 'Thank you for your order!'
       redirect_to(root_path)
     else
-      flash.now[:error] = 'Cannot send message.'
+      flash.now[:error] = 'Cannot send order.'
       render :new
-      # redirect_to(new_cake_order_path)
     end
   end
 
   private
 
   def order_params
-    params.require(:cake_order).permit(:name, :email, :message, :nickname, :captcha, :size, :flavour, :cake_design, :due_date, :collection, :address, :postcode, photos: [])
+    params.require(:cake_order).permit(:name, :email, :message, :nickname, :captcha, :size, :flavour, :cake_design, :due_date, :collection, :address, :postcode, :photo1, :photo2, :photo3)
   end
 end
