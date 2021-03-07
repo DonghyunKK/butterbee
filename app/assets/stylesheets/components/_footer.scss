@@ -15,16 +15,19 @@
   align-items: center;
 }
 
-.footer-links i {
+.footer-links a {
   color: $brown;
   text-decoration: none;
-  font-size: 1.5rem;
   padding: 0 0.5rem;
   transition: 0.4s;
 }
 
 .footer-links a:hover {
   color: $pink;
+}
+
+.footer-links i {
+  font-size: 1.5rem;
 }
 
 .footer-page-links {
@@ -47,5 +50,6 @@
 @media screen and (max-width: 576px) {
   .footer {
   flex-direction: column;
+  padding: 0 2rem;
   }
 }
