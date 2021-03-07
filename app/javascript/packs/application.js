@@ -34,6 +34,7 @@ import { initFlatpickr } from "../plugins/flatpickr";
 import "flatpickr/dist/flatpickr.min.css"
 import { showform } from "../components/form";
 import { fetchFeed, insta } from "../components/instagram"
+import { backToTop } from "../components/to_top_button";
 require("flatpickr/dist/themes/airbnb.css");
 
 // Internal imports, e.g:
@@ -45,5 +46,6 @@ document.addEventListener('turbolinks:load', () => {
   navbarActive();
   initFlatpickr();
   showform();
+  backToTop();
   // fetchFeed();
 });

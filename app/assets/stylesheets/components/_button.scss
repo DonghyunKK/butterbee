@@ -12,3 +12,44 @@
   background: $peach;
   color: white;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.to-top {
+  background: $light-pink;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: $white;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 4rem;
+  pointer-events: auto;
+  opacity: 1;
+  &:hover {
+    color: $pink;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .to-top {
+    right: 1rem;
+  }
+  .to-top.active {
+    bottom: 5rem;
+  }
+}
