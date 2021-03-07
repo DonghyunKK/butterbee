@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.footer-links a {
+.footer-links i {
   color: $brown;
   text-decoration: none;
   font-size: 1.5rem;
@@ -27,6 +27,14 @@
   color: $pink;
 }
 
+.footer-page-links {
+  color: $brown;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0 0.5rem;
+  transition: 0.4s;
+  }
+
 .footer-copyright {
   font-size: 0.9rem;
 }
@@ -36,10 +44,8 @@
   color: $brown;
 }
 
-// @media only screen and (max-width: 429px) {
-//   .footer {
-//   height: 2.5rem;
-//   font-size: 0.7rem;
-//   padding: 0 1rem;
-// }
-// }
+@media screen and (max-width: 576px) {
+  .footer {
+  flex-direction: column;
+  }
+}
