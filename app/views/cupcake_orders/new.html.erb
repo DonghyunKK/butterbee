@@ -2,22 +2,24 @@
   <div class="info-text">
     <h2>Cupcake Order</h2>
     <br>
-    <p>All cake designs are bespoke and tailored to your design requests.<br><br>Please take a look at our Gallery for inspiration.<br> You can choose from our designs, merge designs or/and suggest your own idea. <br>We are most happy to create your ideal cake with you.</p>
+    <p>All cupcake designs can be tailored to your design requests.<br>Please take a look at our Gallery for inspiration.<br><br> You may choose one of our complete designs. <br>Or choose a design and change aspects such as colour, flowers, add text etc.<br> Or submit a complete custom order. </p>
   </div>
+  <div class="form-box">
   <%= simple_form_for(@cupcake_order) do |f| %>
     <h3>Your Cupcake</h3>
-    <%= f.input :boxes, :collection => ['Box of 6 (1 flavour) £24', 'Box of 12 (1-2 flavour) £44'] %>
-    <p> &#10033; Min. order 6 / Max. order 48 </p>
+    <%= f.input :boxes, :collection => ['Box of 6 (1 flavour) £24', 'Box of 12 (1-2 flavour) £44'], input_html: {class: "form-select"}, prompt: 'Select Box' %>
+    <p class="small-notice"> &#10033; Min. order 6 / Max. order 48 </p>
     <%= f.input :flavour, :collection => 
       ['Carrot Cake with Cream Cheese Frosting & Vanilla Buttercream (n)', 
       'Chocolate Cake with Chocolate Hazelnut Frosting & Vanilla Buttercream (n)', 
       'Black Sesame Cake with Sesame Tahini Frosting & Vanilla Buttercream (s)', 
       'Matcha Cake with Matcha & Vanilla Buttercream', 
       'Mocha Cake with Espresso & Vanilla Buttercream',
-      'Peanut Butter Cake with Peanut Butter Frosting & Vanilla Buttercream (n)'] %>
-        <p> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts / (s) contains sesame</p>
+      'Peanut Butter Cake with Peanut Butter Frosting & Vanilla Buttercream (n)'], input_html: {class: "form-select"}, prompt: 'Select Flavour' %>
+        <p class="small-notice"> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts / (s) contains sesame</p>
     <%= f.input :cupcake_design, collection: @cupcakes_list, label: 'Design', prompt: 'If you would like one of our designs please select here.', input_html: {class: "form-select"} %>
-    <label class="select optional" for="photo-area">Custom</label>
+    <div class="request-box">
+    <label class="select optional" for="photo-area">Design request</label>
     <div class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures below and include description below.</div>
     <div class="photo-area">
       <%= f.file_field :photo1, as: :file, input_html: {class: "photo-input"} %>
@@ -29,6 +31,7 @@
                     cols: 60,
                     required: true,
                     placeholder: "Your Message"%><br>
+    </div>
     <div class= "hidden d-none">
       <%= f.text_field :nickname %>
     </div>
@@ -36,11 +39,14 @@
     <%= f.input :name, placeholder: 'Enter your name' %>
     <%= f.input :email, placeholder: 'Enter your Email' %>
     <%= f.input :due_date, as: :string, required: false, label: 'Due date', input_html: {class: "datepicker"} %>
-    <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
+    <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability from £5)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
     <div class="delivery-option">
-      <%= f.input :address, placeholder: 'Enter your address', required: true %>
-      <%= f.input :postcode, placeholder: 'Enter your postcode', required: true %>
+      <%= f.input :recipient_name, placeholder: 'Enter recipient\'s name' %>
+      <%= f.input :address, placeholder: 'Enter recipient\'s address', required: true %>
+      <%= f.input :postcode, placeholder: 'Enter recipient\'s postcode', required: true %>
+      <%= f.input :contact_number, placeholder: 'Enter recipient\'s number', required: true %>
     </div>
     <%= f.submit 'Send Cupcake Order', class: "btn-order" %>
   <% end %>
+  </div>
 </div>

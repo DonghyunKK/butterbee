@@ -16,7 +16,8 @@
       'Vanilla Cake with Fruit (Strawberry/Peach/Kiwi) Filling & Vanilla Buttercream'], input_html: {class: "form-select"}, prompt: 'Select Flavour' %>
       <p class="small-notice"> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts </p>
     <%= f.input :cake_design, collection: @cakes_list, label: 'Design', prompt: 'If you would like one of our designs please select here.', input_html: {class: "form-select"} %>
-    <label class="select optional" for="photo-area">Custom</label>
+    <div class="request-box">
+    <label class="select optional" for="photo-area">Design request</label>
     <div class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures below and include description below.</div>
     <div class="photo-area">
       <%= f.file_field :photo1, as: :file, input_html: {class: "photo-input"} %>
@@ -27,7 +28,8 @@
                     rows: 10,
                     cols: 60,
                     required: true,
-                    placeholder: "Your Message"%><br>
+                    placeholder: "Your Message"%>
+    </div>
     <div class= "hidden d-none">
       <%= f.text_field :nickname %>
     </div>
@@ -35,10 +37,12 @@
     <%= f.input :name, placeholder: 'Enter your name' %>
     <%= f.input :email, placeholder: 'Enter your Email' %>
     <%= f.input :due_date, as: :string, required: false, label: 'Due date', input_html: {class: "datepicker"} %>
-    <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
+    <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability from £5)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
     <div class="delivery-option">
-      <%= f.input :address, placeholder: 'Enter your address', required: true %>
-      <%= f.input :postcode, placeholder: 'Enter your postcode', required: true %>
+      <%= f.input :recipient_name, placeholder: 'Enter recipient\'s name' %>
+      <%= f.input :address, placeholder: 'Enter recipient\'s address', required: true %>
+      <%= f.input :postcode, placeholder: 'Enter recipient\'s postcode', required: true %>
+      <%= f.input :contact_number, placeholder: 'Enter recipient\'s number', required: true %>
     </div>
     <%= f.submit 'Send Cake Order', class: "btn-order" %>
   <% end %>

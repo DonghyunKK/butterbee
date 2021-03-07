@@ -6,8 +6,10 @@ class CakeOrder < MailForm::Base
   attribute :collection, validate: ["Pick Up", "Delivery"]
   attribute :flavour
   attribute :cake_design
+  attribute :recipient_name
   attribute :address
   attribute :postcode
+  attribute :contact_number
   attribute :due_date, validate: true
   attribute :photo1, attachment: true
   attribute :photo2, attachment: true

@@ -36,9 +36,9 @@
   font-size: 1.1rem;
 }
 
-.dropdown-menu {
-  top: 143%;
-}
+// .dropdown-menu {
+//   top: 200%;
+// }
 
 .dropdown-item.active, .dropdown-item:active {
   background-color: $peach;
@@ -64,6 +64,10 @@
   }
 
   .navbar .navbar-collapse {
+    text-align: center;
+  }
+
+  .dropdown-menu.show {
     text-align: center;
   }
 }
