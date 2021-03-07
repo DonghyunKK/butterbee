@@ -45,5 +45,5 @@ document.addEventListener('turbolinks:load', () => {
   navbarActive();
   initFlatpickr();
   showform();
-  fetchFeed();
+  // fetchFeed();
 });
