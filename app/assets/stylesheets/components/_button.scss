@@ -13,6 +13,17 @@
   color: white;
 }
 
+.btn-confirm {
+  color: white;
+  width: 12rem;
+  text-decoration: none;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: $pink;
+  transition: background 0.3s ease;
+}
+
 html {
   scroll-behavior: smooth;
 }
