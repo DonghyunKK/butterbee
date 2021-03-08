@@ -32,32 +32,19 @@ import "dropzone/dist/min/basic.min.css";
 //Flatpickr
 import { initFlatpickr } from "../plugins/flatpickr";
 import "flatpickr/dist/flatpickr.min.css"
+require("flatpickr/dist/themes/airbnb.css");
+
+//Internal imports
 import { showform } from "../components/form";
 import { fetchFeed, insta } from "../components/instagram"
 import { backToTop } from "../components/to_top_button";
-import { initNewOrderAlert, initSweetalert } from "../components/sweet_alert";
-require("flatpickr/dist/themes/airbnb.css");
 
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initSelect2();
   navbarActive();
   initFlatpickr();
   showform();
   backToTop();
-  initNewOrderAlert();
-  // initSweetalert('#newOrderSubmitButton', {
-  //   title: "Are you sure?",
-  //   text: "This action cannot be reversed",
-  //   icon: "warning"
-  // }, (value) => {
-  //   if (value) {
-  //     const link = document.querySelector('#complete-link');
-  //     link.click();
-  //   }
-  // });
   // fetchFeed();
 });

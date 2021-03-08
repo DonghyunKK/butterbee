@@ -15,6 +15,7 @@ class CakeOrdersController < ApplicationController
     if @cake_order.deliver
     # flash.now[:notice] = 'Thank you for your order!'
     # redirect_to(root_path)
+      redirect_to(confirm_path)
     else
     flash.now[:error] = 'Cannot send order.'
     render :new

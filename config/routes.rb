@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/faq', to: 'pages#faq', as: 'faq'
   get '/terms', to: 'pages#terms', as: 'terms'
   get '/private', to: 'pages#private', as: 'private'
+  get '/confirm', to: 'pages#confirm', as: 'confirm'
   # get '/cake_order', to: 'pages#cake_order', as: 'cake_order'
   # get '/cupcake_order', to: 'pages#cupcake_order', as: 'cupcake_order'
   resources :cake_orders, only: [:new, :create]
