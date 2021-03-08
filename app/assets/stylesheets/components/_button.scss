@@ -22,6 +22,9 @@
   font-weight: bold;
   background: $pink;
   transition: background 0.3s ease;
+  &:hover {
+  color: white;
+  }
 }
 
 html {

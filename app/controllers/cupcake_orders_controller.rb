@@ -13,8 +13,8 @@ class CupcakeOrdersController < ApplicationController
     @cupcake_order = CupcakeOrder.new(params[:cupcake_order])
     @cupcake_order.request = request
     if @cupcake_order.deliver
-      flash.now[:notice] = 'Thank you for your message!'
-      render :new
+      # flash.now[:notice] = 'Thank you for your message!'
+      redirect_to(confirm_path)
     else
       flash.now[:error] = 'Cannot send message.'
       render :new
