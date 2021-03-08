@@ -35,6 +35,7 @@ import "flatpickr/dist/flatpickr.min.css"
 import { showform } from "../components/form";
 import { fetchFeed, insta } from "../components/instagram"
 import { backToTop } from "../components/to_top_button";
+import { initNewOrderAlert, initSweetalert } from "../components/sweet_alert";
 require("flatpickr/dist/themes/airbnb.css");
 
 // Internal imports, e.g:
@@ -47,5 +48,16 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   showform();
   backToTop();
+  initNewOrderAlert();
+  // initSweetalert('#newOrderSubmitButton', {
+  //   title: "Are you sure?",
+  //   text: "This action cannot be reversed",
+  //   icon: "warning"
+  // }, (value) => {
+  //   if (value) {
+  //     const link = document.querySelector('#complete-link');
+  //     link.click();
+  //   }
+  // });
   // fetchFeed();
 });

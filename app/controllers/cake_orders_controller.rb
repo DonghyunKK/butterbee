@@ -13,11 +13,11 @@ class CakeOrdersController < ApplicationController
     @cake_order = CakeOrder.new(params[:cake_order])
     @cake_order.request = request
     if @cake_order.deliver
-      flash.now[:notice] = 'Thank you for your order!'
-      redirect_to(root_path)
+    # flash.now[:notice] = 'Thank you for your order!'
+    # redirect_to(root_path)
     else
-      flash.now[:error] = 'Cannot send order.'
-      render :new
+    flash.now[:error] = 'Cannot send order.'
+    render :new
     end
   end
 

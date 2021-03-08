@@ -37,6 +37,9 @@ gem 'dropzonejs-rails'
 # mail_form for order form
 gem 'mail_form'
 
+# add sweetify in order to use sweetalert instead of flash
+gem 'sweetify'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

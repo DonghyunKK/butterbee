@@ -7,7 +7,7 @@ const initFlatpickr = () => {
     disable: [
         {
             from: "today",
-            to: new Date().fp_incr(5)
+            to: new Date().fp_incr(7)
         }
     ]
   });
