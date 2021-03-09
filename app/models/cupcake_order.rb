@@ -19,8 +19,8 @@ class CupcakeOrder < MailForm::Base
   def headers
     {
       #this is the subject for the email generated, it can be anything you want
-      subject: "My Order Form",
-      to: 'donghyunkim524@gmail.com',
+      subject: "My Cupcake Order Form",
+      to: 'butterbeebakerylondon@outlook.com',
       from: %("#{name}" <#{email}>)
       #the from will display the name entered by the user followed by the email
     }
