@@ -1,12 +1,16 @@
 <div class="footer">
   <div class="footer-links">
-    <a href="https://www.instagram.com/butterbeebakerylondon/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.facebook.com/butterbeebakerylondon" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="mailto:butterbeebakerylondon@outlook.com">
-      <i class="far fa-envelope"></i>
-    </a>
-    <%= link_to "TERMS AND CONDITIONS", terms_path, class: "footer-page-links" %>
+    <div class="i-links">
+      <a href="https://www.instagram.com/butterbeebakerylondon/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/butterbeebakerylondon" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:butterbeebakerylondon@outlook.com">
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+    <div class="p-links">
+    <%= link_to "TERMS AND CONDITIONS", terms_path, class: "footer-page-links terms" %>
     <%= link_to "PRIVACY POLICY", privacy_path, class: "footer-page-links" %>
+    </div>
   </div>
   <div class="footer-copyright">
     &copy; 2021 <%= link_to "Butter Bee Bakery", new_user_session_path, class: "login" %>. All Right Reserved. 

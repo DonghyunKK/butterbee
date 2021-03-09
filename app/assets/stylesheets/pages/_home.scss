@@ -1,4 +1,14 @@
 // Specific CSS for your home-page
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  // font-family: "Playfair Display", "serif";
+  background-color: $white;
+}
+
 .about {
   text-align: center;
   p {
@@ -14,11 +24,18 @@
   }
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  // font-family: "Playfair Display", "serif";
-  background-color: $white;
+@media screen and (max-width: 576px) {
+  .about {
+    p {
+      font-size: 1rem;
+    }
+  }
+
+.seasonal_title {
+    p {
+      font-size: 1rem;
+    }
+  }
 }
+
+
