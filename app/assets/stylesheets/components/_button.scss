@@ -4,12 +4,12 @@
   padding: 8px 24px;
   border-radius: 8px;
   font-weight: bold;
-  background: $pink;
+  background: $green;
   transition: background 0.3s ease;
 }
 
 .btn-main:hover {
-  background: $peach;
+  background: #B3C586;
   color: white;
 }
 
@@ -20,7 +20,7 @@
   padding: 8px 24px;
   border-radius: 8px;
   font-weight: bold;
-  background: $pink;
+  background: #EC837F;
   transition: background 0.3s ease;
   &:hover {
   color: white;

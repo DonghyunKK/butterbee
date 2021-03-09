@@ -7,7 +7,7 @@
   <div class="form-box">
   <%= simple_form_for(@cupcake_order) do |f| %>
     <h3>Your Cupcake</h3>
-    <%= f.input :boxes, :collection => ['Box of 6 (1 flavour) £24', 'Box of 12 (1-2 flavour) £44'], input_html: {class: "form-select"}, prompt: 'Select Box' %>
+    <%= f.input :boxes, :collection => ['Box of 6 (1 flavour) £24', 'Box of 12 (1-2 flavour) £44', 'Other quantity - please state in message below'], input_html: {class: "form-select"}, prompt: 'Select Quantity' %>
     <p class="small-notice"> &#10033; Min. order 6 / Max. order 48 </p>
     <%= f.input :flavour, :collection => 
       ['Carrot Cake with Cream Cheese Frosting & Vanilla Buttercream (n)', 
@@ -19,7 +19,7 @@
         <p class="small-notice"> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts / (s) contains sesame</p>
     <%= f.input :cupcake_design, collection: @cupcakes_list, label: 'Design', prompt: 'If you would like one of our designs please select here.', input_html: {class: "form-select"} %>
     <div class="request-box">
-    <label class="select optional" for="photo-area">Design request</label>
+    <label class="select optional" for="photo-area">Design request / modification</label>
     <div class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures below and include description below.</div>
     <div class="photo-area">
       <%= f.file_field :photo1, as: :file, input_html: {class: "photo-input"} %>
@@ -38,6 +38,7 @@
     <h3 class="h3-padding-top">Your Details</h3>
     <%= f.input :name, placeholder: 'Enter your name' %>
     <%= f.input :email, placeholder: 'Enter your Email' %>
+    <p class="small-notice"> &#10033; Please make sure your email is correct. In order for us to contact you back. </p>
     <%= f.input :due_date, as: :string, required: false, label: 'Due date', input_html: {class: "datepicker"} %>
     <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability from £5)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
     <div class="delivery-option">

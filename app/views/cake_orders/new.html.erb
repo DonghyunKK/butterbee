@@ -17,8 +17,8 @@
       <p class="small-notice"> &#10033; All cakes contain eggs, milk / (n) contains treenuts, peanuts </p>
     <%= f.input :cake_design, collection: @cakes_list, label: 'Design', prompt: 'If you would like one of our designs please select here.', input_html: {class: "form-select"} %>
     <div class="request-box">
-    <label class="select optional" for="photo-area">Design request</label>
-    <div class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures below and include description below.</div>
+    <label class="select optional" for="photo-area">Design request / modification</label>
+    <div class="photo-label">If you would like to change some aspects of your chosen design or create a complete custom design, <br> please upload pictures of what you like below and include description below.</div>
     <div class="photo-area">
       <%= f.file_field :photo1, as: :file, input_html: {class: "photo-input"} %>
       <%= f.file_field :photo2, as: :file, input_html: {class: "photo-input"} %>
@@ -36,6 +36,7 @@
     <h3 class="h3-padding-top">Your Details</h3>
     <%= f.input :name, placeholder: 'Enter your name' %>
     <%= f.input :email, placeholder: 'Enter your Email' %>
+    <p class="small-notice"> &#10033; Please make sure your email is correct. In order for us to contact you back. </p>
     <%= f.input :due_date, as: :string, required: false, label: 'Due date', input_html: {class: "datepicker"} %>
     <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability from £5)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>
     <div class="delivery-option">
