@@ -1,16 +1,16 @@
 class CakeOrder < MailForm::Base
   attribute :name, validate: true
   attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :message
   attribute :size
-  attribute :collection, validate: ["Pick Up", "Delivery"]
   attribute :flavour
   attribute :cake_design
+  attribute :message
+  attribute :due_date, validate: true
+  attribute :collection, validate: ["Pick Up", "Delivery"]
   attribute :recipient_name
   attribute :address
   attribute :postcode
   attribute :contact_number
-  attribute :due_date, validate: true
   attribute :photo1, attachment: true
   attribute :photo2, attachment: true
   attribute :photo3, attachment: true
@@ -20,7 +20,7 @@ class CakeOrder < MailForm::Base
     {
       #this is the subject for the email generated, it can be anything you want
       subject: "My Order Form",
-      to: 'donghyunkim524@gmail.com',
+      to: 'butterbeebakerylondon@outlook.com',
       from: %("#{name}" <#{email}>)
       #the from will display the name entered by the user followed by the email
     }
