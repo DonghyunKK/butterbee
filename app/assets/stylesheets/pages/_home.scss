@@ -24,6 +24,12 @@ body {
   }
 }
 
+.sns-box {
+  padding: 9rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
 @media screen and (max-width: 576px) {
   .about {
     p {
@@ -31,10 +37,15 @@ body {
     }
   }
 
-.seasonal_title {
+  .seasonal_title {
     p {
       font-size: 1rem;
     }
+  }
+
+  .sns-box {
+    flex-direction: column;
+    width: 100%;
   }
 }
 

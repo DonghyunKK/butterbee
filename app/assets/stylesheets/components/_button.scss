@@ -27,6 +27,20 @@
   }
 }
 
+.btn-follow {
+  color: white;
+  background-color: #0095f6;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bolder;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

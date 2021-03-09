@@ -1,0 +1,61 @@
+.feed-box {
+  width: 450px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  a {
+    display: block;
+    width: 9rem;
+    height: 9rem;
+    z-index: 3;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    }
+}
+
+li {
+  list-style: none;
+}
+
+.feed-image {
+  width: 9rem;
+  height: 9rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.facebook {
+  width: 450px;
+}
+
+.follow {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  p {
+  margin: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .feed-box {
+    width: 400px;
+    height: 400px;
+    .feed-link {
+    width: 8rem;
+    height: 8rem;
+    }
+  }
+
+  .feed-image {
+  width: 8rem;
+  height: 8rem;
+  }
+
+  .facebook {
+    padding-top: 3rem;
+  }
+}

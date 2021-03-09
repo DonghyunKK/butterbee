@@ -46,5 +46,5 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
   showform();
   backToTop();
-  // fetchFeed();
+  fetchFeed();
 });
