@@ -26,7 +26,7 @@ require("channels")
 import "bootstrap";
 import "controllers"
 import { navbarActive } from "../components/navbar";
-require ("dropzone/dist/min/dropzone.min.css");
+import "dropzone/dist/min/dropzone.min.css";
 require ("dropzone/dist/min/basic.min.css");
 
 //Flatpickr
@@ -36,7 +36,7 @@ require("flatpickr/dist/themes/airbnb.css");
 
 //Internal imports
 import { showform } from "../components/form";
-import { fetchFeed, insta } from "../components/instagram"
+import { fetchFeed } from "../components/instagram"
 import { backToTop } from "../components/to_top_button";
 
 

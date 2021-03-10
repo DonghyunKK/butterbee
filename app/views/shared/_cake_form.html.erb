@@ -3,7 +3,7 @@
     <%= f.input :name %>
     <%= f.input :item_code %>
     <%= f.input :seasonal, :as => :boolean %>
-    <div class="dropzone dropzone-default dz-clickable" id="dropzone-style" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
+    <div class="dropzone dropzone-default dz-clickable" data-controller="dropzone" data-max-file-size="2" data-dropzone-max-files="5">
       <%= f.file_field :photos, as: :file, multiple: true, direct_upload: true, data: { dropzone_target: "input" } %>
       <div class="dropzone-msg dz-message needsclick">
         <h3 class="dropzone-msg-title">Drag here to upload or click here to browse</h3>
