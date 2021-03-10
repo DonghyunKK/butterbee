@@ -26,8 +26,6 @@ require("channels")
 import "bootstrap";
 import "controllers"
 import { navbarActive } from "../components/navbar";
-import "dropzone/dist/min/dropzone.min.css";
-require ("dropzone/dist/min/basic.min.css");
 
 //Flatpickr
 import { initFlatpickr } from "../plugins/flatpickr";
