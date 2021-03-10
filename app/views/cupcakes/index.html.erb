@@ -17,11 +17,21 @@
         <% if cupcake.photos.attached? %>
           <%= render '/shared/modal_with_carousel', cake: cupcake %>
         <% end %>
-        <div class="middle">
+        <!--<div class="middle">
           <div class="text">
             <h4><%= cupcake.name %></h4>
             <%= cupcake.item_code %>
           </div>
+          <% if current_user && current_user.admin == true %>
+            <%= link_to "Edit", edit_cupcake_path(cupcake), class: "btn btn-white" %>
+            <%= link_to "Delete",
+              cupcake_path(cupcake),
+              method: :delete,
+              class: "btn btn-white",
+              data: { confirm: "Are you sure?" } %>
+          <% end %>
+        </div>-->
+        <div class="buttons">
           <% if current_user && current_user.admin == true %>
             <%= link_to "Edit", edit_cupcake_path(cupcake), class: "btn btn-white" %>
             <%= link_to "Delete",
