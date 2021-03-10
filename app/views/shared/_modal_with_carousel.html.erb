@@ -1,6 +1,12 @@
 <!-- Button trigger modal -->
 <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal-<%= cake.id %>">
-  <%= cl_image_tag cake.photos.first.key, crop: :fill, class: "image" %>
+  <%= cl_image_tag cake.photos[0].key, crop: :fill, class: "image" %>
+  <div class="middle">
+    <div class="text">
+      <h5><%= cake.name %></h5>
+      <%= cake.item_code %>
+    </div>
+  </div>
 </button>
 
 <!-- Modal -->
@@ -14,22 +20,22 @@
       <div class="modal-body">
         <!-- Carousel Start -->
         <!-- more than on carousel on the page, need to add cakeId -->
-        <div id="carouselExampleIndicators-<%= cake.id %>" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators-<%= cake.id %>" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
           <div class="carousel-indicators">
             <a role="button" data-bs-target="#carouselExampleIndicators-<%= cake.id %>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></a>
             <a role="button" data-bs-target="#carouselExampleIndicators-<%= cake.id %>"  data-bs-slide-to="1" aria-label="Slide 2"></a>
             <a role="button" data-bs-target="#carouselExampleIndicators-<%= cake.id %>" data-bs-slide-to="2" aria-label="Slide 3"></a>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <%= cl_image_tag cake.photos.first.key, class: 'd-block w-100' %>
-            </div>
+            <%# <div class="carousel-item active"> %>
+              <%#= cl_image_tag cake.photos.first.key, class: 'd-block w-100' %>
+            <%# </div> %>
             <% cake.photos.each_with_index do |photo, index| %>
-              <% unless index == 0 %>
-                <div class="carousel-item">
+              <%# unless index == 0 %>
+                <div class="carousel-item <%= 'active' if index==0 %>">
                   <%= cl_image_tag photo.key, class: 'd-block w-100' %>
                 </div>
-              <% end %>
+              <%# end %>
             <% end %>
           </div>
           <%# <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">

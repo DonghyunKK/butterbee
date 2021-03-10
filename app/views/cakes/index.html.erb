@@ -17,9 +17,9 @@
         <% if cake.photos.attached? %>
           <%= render '/shared/modal_with_carousel', cake: cake %>
         <% end %>
-        <div class="middle">
+        <!--<div class="middle">
           <div class="text">
-            <h4><%= cake.name %></h4>
+            <h5><%= cake.name %></h5>
             <%= cake.item_code %>
           </div>
           <div class="buttons">
@@ -32,7 +32,19 @@
                 data: { confirm: "Are you sure?" } %>
             <% end %>
           </div>
-        </div>
+        </div>-->
+        <%# <div class="middel"> %>
+          <div class="buttons">
+            <% if current_user && current_user.admin == true %>
+              <%= link_to "Edit", edit_cake_path(cake), class: "btn btn-white" %>
+              <%= link_to "Delete",
+                cake_path(cake),
+                method: :delete,
+                class: "btn btn-white",
+                data: { confirm: "Are you sure?" } %>
+            <% end %>
+          </div>
+        <%# </div> %>
       </div>
     <% end %>
   </div>
