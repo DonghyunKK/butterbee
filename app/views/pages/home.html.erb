@@ -10,6 +10,13 @@
     <h2>Limited Edition</h2><br>
     <p>Seasonal designs and flavours for a limited period only.</p>
   </div>
+  <% if @seasonal_cake.nil? && @seasonal_cupcake.nil? %>
+    <div class="seasonal">
+      <% 4.times do %>
+      <%= image_tag "coming_soon.PNG", class: "placeholder" %>
+      <% end %>
+    </div>
+  <% end %>
   <%= render 'shared/seasonal' %>
   <div class="sns-box">
   <%= render 'shared/sns' %>
