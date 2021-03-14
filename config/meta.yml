@@ -1,0 +1,5 @@
+meta_product_name: "Butter Bee Bakery"
+meta_title: "Butter Bee Bakery | London Flower Cakes & Cupcakes"
+meta_description: "We are an Artisan Cake Studio based in Ealing: specialising in buttercream floral cake designs. For birthdays, showers and more."
+meta_image: "cover.jpg" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
