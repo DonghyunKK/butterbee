@@ -33,6 +33,15 @@ body {
 
 @media screen and (max-width: 768px) {
   .about {
+    padding-top: 6rem;
+    p {
+      padding: 0 3rem;
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+
+  .seasonal_title {
     padding-top: 5rem;
     p {
       padding: 0 3rem;
@@ -40,16 +49,8 @@ body {
     }
   }
 
-  .seasonal_title {
-    padding-top: 3rem;
-    p {
-      padding: 0 3rem;
-      font-size: 1rem;
-    }
-  }
-
   .responsive-space{
-    padding: 0 3rem;
+    padding: 2rem 3rem;
   }
   .sns-box {
     flex-direction: column;
