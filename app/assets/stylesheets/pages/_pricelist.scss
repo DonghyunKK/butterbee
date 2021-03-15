@@ -96,14 +96,15 @@ span {
 @media screen and (max-width: 576px) {
   .price-table {
     flex-direction: column;
+    padding-top: 4rem;
   }
   
   .price-card {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     height: 54rem;
   }
 
   .price-card__size-left {
-  padding-top: 2rem;
-}
+    padding-top: 2rem;
+  }
 }

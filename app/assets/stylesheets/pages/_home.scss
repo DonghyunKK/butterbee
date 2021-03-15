@@ -42,7 +42,7 @@ body {
   }
 
   .seasonal_title {
-    padding-top: 5rem;
+    padding-top: 6rem;
     p {
       padding: 0 3rem;
       font-size: 1rem;
@@ -52,10 +52,12 @@ body {
   .responsive-space{
     padding: 2rem 3rem;
   }
+  
   .sns-box {
     flex-direction: column;
     width: 100%;
     padding: 9rem 0 0 0;
+    align-items: center;
   }
 }
 
