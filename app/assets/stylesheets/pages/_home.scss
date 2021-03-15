@@ -25,11 +25,6 @@ body {
   }
 }
 
-.sns_title {
-  text-align: center;
-  padding-top: 8rem;
-}
-
 .sns-box {
   padding: 15rem 2rem 7rem 2rem;
   display: flex;
@@ -40,6 +35,7 @@ body {
   .about {
     padding-top: 2rem;
     p {
+      padding: 0 3rem;
       font-size: 1rem;
     }
   }
@@ -47,6 +43,7 @@ body {
   .seasonal_title {
     padding-top: 3rem;
     p {
+      padding: 0 3rem;
       font-size: 1rem;
     }
   }
