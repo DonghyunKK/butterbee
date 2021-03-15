@@ -11,6 +11,7 @@ body {
 
 .about {
   text-align: center;
+  padding-top: 7rem;
   p {
     font-size: 1.1rem;
   }
@@ -18,26 +19,33 @@ body {
 
 .seasonal_title {
   text-align: center;
-  padding: 2rem 0;
+  padding: 5rem 0 2rem 0;
   p {
     font-size: 1.1rem;
   }
 }
 
+.sns_title {
+  text-align: center;
+  padding-top: 8rem;
+}
+
 .sns-box {
-  padding: 9rem 2rem 2rem 2rem;
+  padding: 15rem 2rem 7rem 2rem;
   display: flex;
   justify-content: space-around;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .about {
+    padding-top: 2rem;
     p {
       font-size: 1rem;
     }
   }
 
   .seasonal_title {
+    padding-top: 3rem;
     p {
       font-size: 1rem;
     }
@@ -46,6 +54,7 @@ body {
   .sns-box {
     flex-direction: column;
     width: 100%;
+    padding: 9rem 0 0 0;
   }
 }
 

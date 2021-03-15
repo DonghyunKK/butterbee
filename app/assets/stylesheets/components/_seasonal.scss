@@ -19,3 +19,18 @@
   align-self: center;
   justify-self: center;
 }
+
+@media screen and (max-width: 768px) {
+  .seasonal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seasonal_image {
+    width: 180px;
+    height: 180px;
+  }
+  .placeholder {
+    width: 180px;
+    height: 180px;
+  }
+}

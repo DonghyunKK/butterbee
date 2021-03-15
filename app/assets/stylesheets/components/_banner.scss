@@ -5,3 +5,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media screen and (max-width: 576px) {
+  .banner {
+    height: 15rem;
+  }
+}

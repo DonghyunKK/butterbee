@@ -15,31 +15,6 @@ textarea:focus {
   outline-color: $peach;
 }
 
-.btn-order {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  margin: 5% 0 0 0;
-  height: 45px;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  // border: 3px solid $green;
-  border: none;
-  border-radius: 0.5rem;
-  color: $brown;
-  // color: $white;
-  font-weight: 500;
-  font-size: 1.2em;
-  text-align: center;
-  background-color: $green;
-  transition: color 0.25s ease;
-  &:hover {
-    color: $white;
-    // background-color: #B3C586;
-  }
-}
-
 .small-notice {
   font-size: 0.75rem;
   margin-left: 1rem;
