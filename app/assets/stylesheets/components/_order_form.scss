@@ -140,6 +140,10 @@ form {
   border-color: $pink;
 }
 
+.form-control:disabled, .form-control[readonly] {
+  background-color: $white;
+}
+
 @media screen and (max-width: 768px) {
   .form-box {
     width: 93%;
