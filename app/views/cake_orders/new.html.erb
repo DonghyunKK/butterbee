@@ -7,7 +7,7 @@
   <div class="form-box">
   <%= simple_form_for(@cake_order) do |f| %>
     <h3>Your Cake</h3>
-    <%= f.input :size, :collection => ['4\'\' (4-6 servings) £30', '6\'\' (8-10 servings) £35', '8\'\' (12-14 servings) £80'], input_html: {class: "form-select"}, prompt: 'Select Size' %>
+    <%= f.input :size, :collection => ['4\'\' (4-6 servings) £30', '6\'\' (8-10 servings) £55', '8\'\' (12-14 servings) £80'], input_html: {class: "form-select"}, prompt: 'Select Size' %>
     <p class="small-notice"> &#10033; For other sizes please email to enquire. </p>
     <%= f.input :flavour, :collection => 
       ['Carrot Cake with Cream Cheese Buttercream Filling & Vanilla Buttercream (n)', 
