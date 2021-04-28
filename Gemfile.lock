@@ -277,8 +277,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sweetify (2.0.0)
-      actionpack
     thor (1.1.0)
     thread_safe (0.3.6)
     thread_safe (0.3.6-java)
@@ -353,7 +351,6 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-  sweetify
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
@@ -364,4 +361,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.1.4
+   2.2.15

@@ -12,6 +12,10 @@ const initFlatpickr = () => {
             // return true to disable
             return (date.getDay() === 1 || date.getDay() === 2 || date.getDay() === 3);
 
+        },
+        {
+          from: "2021-05-01",
+          to: "2021-05-23"
         }
     ],
     "locale": {
