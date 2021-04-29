@@ -10,7 +10,7 @@
   color: #555;
   background-color: #fff;
   width: 45%;
-  height: 54rem;
+  height: 52rem;
   text-align: center;
   margin: 0.5rem;
   padding: 1rem;
@@ -35,8 +35,12 @@ span {
 
 .price-card__flavour__cake {
   padding-top: 1rem;
-  p {
+
+  .first-menu {
     padding-top: 1rem;
+  }
+  p {
+    padding-top: 0.5rem;
   }
 }
 
@@ -56,7 +60,7 @@ span {
 }
 
 .price-card__size-right {
-  padding-top: 4.5rem;
+  padding-top: 2.5rem;
 }
 
 .allergen-container {
@@ -102,7 +106,7 @@ span {
   
   .price-card {
     margin-bottom: 3rem;
-    height: 59rem;
+    height: 57rem;
   }
 
   .price-card__size-left {
