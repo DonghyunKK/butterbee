@@ -10,13 +10,13 @@
   color: #555;
   background-color: #fff;
   width: 45%;
-  height: 52rem;
+  height: 54rem;
   text-align: center;
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 16px;
   max-width: 24rem;
-  min-width: 18rem;
+  min-width: 20rem;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   p {
     margin-top: 0.5rem;
@@ -48,7 +48,7 @@ span {
 }
 
 .price-card__size-left {
-  padding-top: 3.6rem;
+  padding-top: 1.5rem;
 
   p:last-child {
     padding-bottom: 0.6rem;
@@ -56,7 +56,7 @@ span {
 }
 
 .price-card__size-right {
-  padding-top: 2rem;
+  padding-top: 4.5rem;
 }
 
 .allergen-container {
@@ -93,7 +93,8 @@ span {
 }
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1000px) {
+
   .price-table {
     flex-direction: column;
     padding-top: 4rem;
@@ -101,7 +102,7 @@ span {
   
   .price-card {
     margin-bottom: 3rem;
-    height: 56rem;
+    height: 59rem;
   }
 
   .price-card__size-left {
