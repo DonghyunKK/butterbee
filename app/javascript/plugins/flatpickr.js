@@ -16,6 +16,9 @@ const initFlatpickr = () => {
         {
           from: "2021-05-01",
           to: "2021-05-23"
+        },
+        {
+          enable: "2021-05-31"
         }
     ],
     "locale": {
