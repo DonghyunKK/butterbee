@@ -10,7 +10,7 @@ const initFlatpickr = () => {
         },
         function(date) {
             // return true to disable
-            return (date.getDay() === 2 || date.getDay() === 3);
+            return (date.getDate() !== 31 && date.getDay() === 1 || date.getDay() === 2 || date.getDay() === 3 );
 
         },
         {
