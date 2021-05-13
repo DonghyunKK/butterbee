@@ -10,12 +10,12 @@ const initFlatpickr = () => {
         },
         function(date) {
             // return true to disable
-            return (date.getDate() !== 31 && date.getDay() === 1 || date.getDay() === 2 || date.getDay() === 3 );
+            return (date.getDay() === 1 || date.getDay() === 2 || date.getDay() === 3 );
 
         },
         {
           from: "2021-05-01",
-          to: "2021-05-24"
+          to: "2021-05-31"
         },
         {
           from: "2021-06-21",
