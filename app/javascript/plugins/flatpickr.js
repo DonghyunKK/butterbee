@@ -33,7 +33,7 @@ const initFlatpickr = () => {
           from: "2021-10-11",
           to: "2021-11-07"
         },
-        "2021-07-17"
+        "2021-07-17", "2021-07-24" 
     ],
     "locale": {
         "firstDayOfWeek": 1 // start week on Monday
