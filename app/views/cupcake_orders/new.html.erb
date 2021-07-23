@@ -40,7 +40,7 @@ Change in colour/design? New design? Add Happy Birthday message? Allergies?"%><b
     <%= f.input :name, placeholder: 'Enter your name' %>
     <%= f.input :email, placeholder: 'Enter your Email' %>
     <p class="small-notice"> &#10033; Please make sure your email is correct. In order for us to contact you back. </p>
-    <%= f.input :number, label: 'Contact Number', placeholder: 'Enter your number', required: true %>
+    <%= f.input :number, label: 'Contact Number', placeholder: 'Enter your number' %>
     <p class="small-notice"> &#10033; We will only contact you by message incase we don't hear back from you through email. As our emails sometimes end up in Junk Mail. </p>
     <%= f.input :due_date, as: :string, required: true, label: 'Due date', input_html: {class: "datepicker"} %>
     <%= f.input :collection, as: :radio_buttons, label: 'Collection / Delivery', collection: [['Pick Up', 'Pick Up (from London W5 / 9:00 to 13:00)'], ['Delivery', 'London Delivery (subject to availability from £5)']], label_method: :last, value_method: :first, :item_wrapper_class => 'inline', input_html: {class: "input-radio"} %>

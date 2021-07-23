@@ -1,7 +1,7 @@
 class CakeOrder < MailForm::Base
   attribute :name, validate: true
   attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :number, validate: true
+  attribute :number
   attribute :size
   attribute :flavour
   attribute :cake_design
