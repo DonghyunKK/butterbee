@@ -3,8 +3,10 @@
     <h2>Cake Order</h2>
     <br>
     <p>All cake designs can be tailored to your design requests.<br>Please take a look at our Gallery for inspiration.<br><br> You may choose one of our complete designs. <br>Or choose a design and change aspects such as colour, flowers, add text etc.<br> Or submit a complete custom order. </p>
-    <p class="color-red"> &#10033; Fully booked until November </p>
+    <p class="color-red"> &#10033; We are closed now until further notice.</p>
   </div>
+  <%#prevent rendering for the form%>
+  <% if false %>
   <div class="form-box">
   <%= simple_form_for(@cake_order) do |f| %>
     <h3>Your Cake</h3>
@@ -54,4 +56,5 @@ Change in colour/design? New design? Add Happy Birthday message? Allergies?"%>
     <%= f.submit 'Send Cake Order', class: "btn-order", id: "newOrderSubmitButton" %>
   <% end %>
   </div>
+  <% end %>
 </div>
