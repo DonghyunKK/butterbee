@@ -13,10 +13,28 @@ const initFlatpickr = () => {
             return (date.getDay() === 1 || date.getDay() === 2 || date.getDay() === 3 );
 
         },
-        {
-          from: "2021-07-29",
-          to: "2021-11-14"
-        },
+    ],
+    enable: [
+      {
+        from: "2022-01-08",
+        to: "2022-01-09"
+      },
+      {
+        from: "2022-01-22",
+        to: "2022-01-23"
+      },
+      {
+        from: "2022-02-12",
+        to: "2022-02-13"
+      },
+      {
+        from: "2022-02-19",
+        to: "2022-02-20"
+      },
+      {
+        from: "2022-02-26",
+        to: "2022-02-27"
+      },
     ],
     "locale": {
         "firstDayOfWeek": 1 // start week on Monday
