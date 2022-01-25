@@ -43,7 +43,7 @@ Change in colour/design? New design? Add Happy Birthday message? Allergies?"%>
     <%= f.input :name, placeholder: 'Enter your name' %>
     <%= f.input :email, placeholder: 'Enter your Email' %>
     <p class="small-notice"> &#10033; Please make sure your email is correct. In order for us to contact you back. </p>
-    <%= f.input :number, label: 'Contact Number', placeholder: 'Enter your number' %>
+    <%= f.input :number, label: 'Contact Number (Mobile)', placeholder: 'Enter your number' %>
     <p class="small-notice"> &#10033; We will only contact you by message incase we don't hear back from you through email. As our emails sometimes end up in Junk Mail. </p>
     <%= f.input :due_date, as: :string, required: true, label: 'Due date', input_html: {class: "datepicker"} %>
     <p class="small-notice"> &#10033; 7 Days notice required for all orders </p>
