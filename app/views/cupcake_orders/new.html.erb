@@ -10,7 +10,7 @@
   <div class="form-box">
   <%= simple_form_for(@cupcake_order) do |f| %>
     <h3>Your Cupcake</h3>
-    <%= f.input :boxes, :collection => ['Box of 6 (1 flavour) £24', 'Box of 12 (1-2 flavour) £44', 'Other quantity - please state in message below'], input_html: {class: "form-select"}, prompt: 'Select Quantity' %>
+    <%= f.input :boxes, :collection => ['Box of 6 (1 flavour) £26', 'Box of 12 (1-2 flavour) £46', 'Other quantity - please state in message below'], input_html: {class: "form-select"}, prompt: 'Select Quantity' %>
     <p class="small-notice"> &#10033; Min. order 6 / Max. order 48 </p>
     <%= f.input :flavour, :collection => 
       ['Carrot Cake with Cream Cheese Frosting & Vanilla Buttercream (n)', 
