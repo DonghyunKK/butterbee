@@ -14,8 +14,8 @@ const initFlatpickr = () => {
         // },
       ],
       enable: [
-        "2022-06-25",
-        "2022-06-26",
+        // "2022-06-25",
+        // "2022-06-26",
       ],
     "locale": {
         "firstDayOfWeek": 1 // start week on Monday
