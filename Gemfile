@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 
 # add cloudinary
-gem 'cloudinary', '~> 1.16.0'
+gem 'cloudinary'
 
 gem 'bootstrap', '~> 5.0.0.beta1'
 
