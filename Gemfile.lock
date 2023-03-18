@@ -310,7 +310,7 @@ DEPENDENCIES
   bootstrap (~> 5.0.0.beta1)
   byebug
   capybara (>= 2.15)
-  cloudinary
+  cloudinary (~> 1.16.0)
   devise
   dotenv-rails
   dropzonejs-rails
